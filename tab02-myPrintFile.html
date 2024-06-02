@@ -541,7 +541,7 @@
                         <div class="settingcard-grid">
                           <input type="checkbox" id="setting01" class="custom-checkbox-inp none">
                           <label for="setting01" class="custom-checkbox-btn">
-                            <img src="assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
+                            <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
                             <span class="txt">문제 생성/설정</span>
                           </label>
                           <div class="custom-checkbox-content">
@@ -577,7 +577,7 @@
                         <div class="settingcard-grid">
                           <input type="checkbox" id="setting02" class="custom-checkbox-inp none">
                           <label for="setting02" class="custom-checkbox-btn">
-                            <img src="assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
+                            <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
                             <span class="txt">단어 생성/설정</span>
                           </label>
                           <div class="custom-checkbox-content">
@@ -700,16 +700,19 @@
         <div id="preview-modal02" class="modal-wrapper">
           <div class="modal-overlay" onclick="closeModal('preview-modal02')"></div>
           <div class="custom-modal preview-modal">
-            <button class="preview-modal-close-btn" onclick="closeModal('preview-modal02')">
-              <img src="assets/images/icon-close.svg" alt="">
-            </button>
+
+            <!-- <button class="preview-modal-close-btn" onclick="closeModal('preview-modal01')">
+            <img src="gpt-tutor/assets/images/icon-close.svg" alt="">
+          </button> -->
             <div class="preview-modal-ttl">
-              <h4 class="ttl">문제 미리보기</h4>
-              <button type="button" class="ylw-solid-btn square-btn btn-md">완료</button>
+              <h4 class="ttl">단어 미리보기</h4>
+              <button type="button" class="ylw-bd-btn square-btn btn-md" onclick="closeModal('preview-modal02')">확인</button>
             </div>
             <div class="preview-modal-content">
               <div class="modal-sidebar">
                 <ul>
+
+                  <!-- TODO: 리스트 클릭시 active 효과 추가 -->
                   <li class="active">
                     <span class="dark-txt">김은성</span>
                     <span class="gray-txt sm-txt">개인지문 1</span>
@@ -734,30 +737,24 @@
                   </li>
                 </ul>
               </div>
-              <div class="modal-sidebar-wrapper">
-                <div class="modal-sidebar-container">
-
-                  <!-- <div class="mdsidebar-ttl-wrap bd-ttl-wrap">
-                  <h5 class="ttl">6월 모의 테스트</h5>
-                  <p class="align-right">ㅇㅇ학원 김민정</p>
-                </div> -->
-                  <div class="description-content">
-                    <p class="txt" style="margin-bottom: 50px;">
-                      문제 팝업 레이아웃은 이미 디자인/퍼블리싱 되어있는데 요 내용은 어떻게 하면 좋을까요? 검토 바랍니다 <br>
-                      보내주신 [웹디자인후최종결과물(별첨)] > [사이드메뉴2 문제생성 결과]폴더 안에 있는 파일들의 내용입니다. <br>
-                      아래 이미지와 같습니다~
-                    </p>
-                    <img src="assets/images/img-example-question01.jpg" alt="" style="display: block; max-width: 100%; margin: 0 auto 10px;">
-                    <img src="assets/images/img-example-question02.jpg" alt="" style="display: block; max-width: 100%; margin: 0 auto 10px;">
-                    <img src="assets/images/img-example-question03.jpg" alt="" style="display: block; max-width: 100%; margin: 0 auto 10px;">
-                    <img src="assets/images/img-example-question04.jpg" alt="" style="display: block; max-width: 100%; margin: 0 auto 10px;">
-                    <img src="assets/images/img-example-question05.jpg" alt="" style="display: block; max-width: 100%; margin: 0 auto 10px;">
-                    <img src="assets/images/img-example-question06.jpg" alt="" style="display: block; max-width: 100%; margin: 0 auto 10px;">
-                    <img src="assets/images/img-example-question07.jpg" alt="" style="display: block; max-width: 100%; margin: 0 auto 10px;">
-                    <img src="assets/images/img-example-question08.jpg" alt="" style="display: block; max-width: 100%; margin: 0 auto 10px;">
-                    <img src="assets/images/img-example-question09.jpg" alt="" style="display: block; max-width: 100%; margin: 0 auto 10px;">
-                    <img src="assets/images/img-example-question10.jpg" alt="" style="display: block; max-width: 100%; margin: 0 auto 10px;">
+              <div class="preview-modal-container">
+                <div class="preview-iframe-wrap">
+                  <iframe src="print02-01.html" frameborder="0"></iframe>
+                </div>
+                <div class="modal-right-sidebar">
+                  <div class="sidebar-ttl">
+                    <h6 class="ttl">재생성 문항</h6>
                   </div>
+                  <ul>
+                    <li class="preview-choiced-list">
+                      <span class="txt">김은성/개인지문 1</span>
+                      <button type="button" class="ico-btn del-btn">
+                        <span class="txt-hidden">삭제하기</span>
+                        <i class="ico ico-x"></i>
+                      </button>
+                    </li>
+                  </ul>
+                  <button type="button" class="ylw-solid-btn btn-lg square-btn btn-full" onclick="openModal('regenerate-modal');">재생성</button>
                 </div>
               </div>
             </div>

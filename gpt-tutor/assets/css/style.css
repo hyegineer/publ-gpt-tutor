@@ -1059,7 +1059,7 @@ img {
 }
 
 .preview-modal {
-  max-width: 1320px;
+  max-width: 1230px;
   width: 90%;
   padding: 25px;
   max-height: 90vh;
@@ -1108,11 +1108,11 @@ img {
 .modal-sidebar li {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 2px;
   border-bottom: 1px solid #DCE4E8;
-  padding: 10px 0;
+  padding: 10px;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -1395,6 +1395,84 @@ img {
   padding: 10px;
   display: none;
   z-index: 10;
+}
+
+/* 2차기획 모달 */
+.preview-modal .preview-choiced-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 7px;
+}
+.preview-modal .preview-choiced-list .txt {
+  width: 100%;
+  display: inline-block;
+  line-height: 1.4;
+  font-size: 15px;
+}
+.preview-modal .preview-choiced-list .del-btn .ico {
+  width: 23px;
+  height: 23px;
+}
+.preview-modal:last-child {
+  margin-bottom: 0;
+}
+
+.preview-modal-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  border: 1px solid #dce4e8;
+  height: 75vh;
+  overflow: hidden;
+}
+.preview-modal-container .preview-iframe-wrap {
+  width: 720px;
+  flex-shrink: 1;
+  height: 100%;
+}
+.preview-modal-container .preview-iframe-wrap iframe {
+  width: 905px;
+  height: calc(100% + 19vh);
+  transform-origin: 0 0;
+  transform: scale(0.8);
+}
+
+.modal-right-sidebar {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+}
+.modal-right-sidebar .sidebar-ttl {
+  width: 100%;
+  background-color: white;
+  padding-bottom: 10px;
+}
+.modal-right-sidebar .sidebar-ttl .ttl {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+.modal-right-sidebar > ul {
+  width: 100%;
+  padding-bottom: 15px;
+  flex: 1;
+  overflow: auto;
+}
+
+.system-modal .system-modal-ttl {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: -20px;
+  padding: 20px 20px 0;
 }
 
 .blackboard-print-container {
