@@ -11,6 +11,14 @@
   margin: 0 auto;
   position: relative;
 }
+.print-wrapper .checkbox-item {
+  position: absolute;
+  left: -29px;
+}
+.print-wrapper .custom-checkbox {
+  width: 20px;
+  height: 20px;
+}
 
 .print-wrapper:after {
   width: 100%;
@@ -275,6 +283,11 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 30px;
+  position: relative;
+}
+.print01-01-content .checkbox-item {
+  top: 5px;
+  transform: translateY(0);
 }
 
 .print01-01-content:last-child {
@@ -304,6 +317,7 @@
 }
 
 .print01-01-thumb-txt {
+  position: relative;
   padding: 15px 0;
   display: flex;
   align-items: flex-start;
@@ -386,6 +400,10 @@
   gap: 10px;
   border-bottom: 2px dashed rgba(255, 119, 35, 0.537254902);
   padding: 20px 0;
+  position: relative;
+}
+.print01-01-arrow-box .box-list .checkbox-item {
+  left: -40px;
 }
 
 .print01-01-arrow-box .box-list:last-child {
@@ -782,6 +800,7 @@
   border-bottom: 2px solid #ff7623;
 }
 .print-wrapper.type-print05 .prt-answer-list {
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -814,8 +833,13 @@
   line-height: 1.4;
 }
 
+.print-wrapper.type-print02 .checkbox-item {
+  top: 3px;
+}
+
 .print-wrapper.type-print02 .inner-content-wrap {
   margin-bottom: 30px;
+  position: relative;
 }
 
 .print-wrapper.type-print02 .inner-content-wrap:last-child {
@@ -1316,6 +1340,7 @@
   border-bottom: 2px solid #37b2b0;
 }
 .print-wrapper.type-print0302 .prt-answer-list {
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -1370,6 +1395,11 @@
 .print-container.type-writing .print-content-wrap {
   border: 3px solid #FEC20E;
   height: 100%;
+  position: relative;
+}
+.print-container.type-writing .print-content-wrap .checkbox-item {
+  left: 20px;
+  top: 20px;
 }
 .print-container.type-writing .writing-ttl-wrap {
   display: flex;
@@ -1574,6 +1604,12 @@ body.print07-body {
   margin-bottom: 50px;
   page-break-after: always;
   page-break-inside: avoid;
+}
+.print07-qst .checkbox-item {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: -5px;
 }
 .print07-qst .txt-bd {
   display: inline-block;
@@ -1819,6 +1855,12 @@ body.print07-body {
   justify-content: flex-start;
   gap: 10px;
   margin-bottom: 30px;
+}
+.print07-answer .checkbox-item {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: -5px;
 }
 
 .print07-answer .answer-ttl {

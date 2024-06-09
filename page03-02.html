@@ -19,7 +19,7 @@
         <div class="header-top">
           <div class="header-inner">
             <h1 class="logo">
-              <a href="company.html">
+              <a href="support.html">
                 <img src="gpt-tutor/assets/images/logo.svg" alt="TITAN">
               </a>
             </h1>
@@ -43,6 +43,8 @@
                         <h5 class="top-ttl">알림</h5>
                       </div>
                       <div class="amodal-content">
+
+                        <!-- TODO: 알림 있을 때 -->
                         <div class="alarm-list-grp">
                           <div class="alarm-list">
                             <span class="time">오전 11:54</span>
@@ -59,6 +61,11 @@
                             <h6 class="name">김민우</h6>
                             <p class="txt">(자동 채점) 변형문제(문제),시험지명:·····</p>
                           </div>
+                        </div>
+
+                        <!-- TODO: 알림 없을 때 -->
+                        <div class="nothing-alarm" style="display: none;">
+                          <p class="txt">아직 일정이 없어요.</p>
                         </div>
                       </div>
                     </div>
@@ -132,6 +139,7 @@
                     <a href="company.html" class="list-btn">회사소개</a>
                     <a href="support.html" class="list-btn">고객센터</a>
                     <a href="account.html" class="list-btn">계정정보</a>
+                    <a href="login.html" class="list-btn">로그아웃</a>
                   </div>
                 </div>
               </div>
@@ -151,7 +159,7 @@
           <div class="header-gnb-to-snb type-02">
             <div class="header-snb-grp">
               <a href="page02-01.html" class="snb ">반별 출제현황</a>
-              <a href="page02-02.html" class="snb ">학생별 오답처리</a>
+              <a href="page02-02.html" class="snb ">학생별 오답관리</a>
             </div>
           </div>
           <div class="header-gnb-to-snb type-03">
@@ -247,7 +255,8 @@
                     이재건 외 7명
                   </div>
                   <div class="tbl-cell">
-                    <button type="button" class="ylw-bd-btn square-btn btn-sm" onclick="openModal('organ-cls-popup');">반 편성</button>
+                    <button type="button" class="ylw-bd-btn square-btn btn-sm" onclick="openModal('organ-cls-popup');">반
+                      편성</button>
                   </div>
                   <div class="tbl-cell">
                     <button type="button" class="ico-btn">
@@ -295,14 +304,16 @@
                   <input type="text" placeholder="신규반 이름을 입력해주세요." class="form-inp type-h35">
                 </div>
               </div>
-              <div class="inp-btn-grp type-search">
-                <input type="text" class="form-inp type-h35" placeholder="학생 이름 검색">
-                <button type="button" class="ylw-bd-btn inp-btn">검색</button>
-              </div>
               <div class="stud-list-layout">
 
                 <!-- 왼쪽 -->
                 <div class="stud-list-left">
+                  <div class="inp-btn-grp-wrapper">
+                    <div class="inp-btn-grp type-search">
+                      <input type="text" class="form-inp type-h35" placeholder="학생 이름 검색">
+                      <button type="button" class="ylw-bd-btn inp-btn">검색</button>
+                    </div>
+                  </div>
                   <div class="stud-list-left-content">
                     <div class="categ-grp">
 
@@ -446,7 +457,7 @@
                           <h3 class="txt">중 3</h3>
                           <p class="gray-txt">(1명)</p>
                         </button>
-                        <button type="button" class="btn-right">
+                        <button type="button" class="btn-right type-minus">
                           <i class="ico ico-minus"></i>
                           <span class="txt-hidden">빼기</span>
                         </button>
@@ -460,7 +471,7 @@
                         <!-- 중분류 내 리스트 -->
                         <div class="sub-categ-btn">
                           <span class="txt">김민지</span>
-                          <button type="button" class="btn-right">
+                          <button type="button" class="btn-right type-minus">
                             <i class="ico ico-minus"></i>
                             <span class="txt-hidden">빼기</span>
                           </button>
@@ -480,7 +491,7 @@
                           <h3 class="txt">2A</h3>
                           <p class="gray-txt">(3명)</p>
                         </button>
-                        <button type="button" class="btn-right">
+                        <button type="button" class="btn-right type-minus">
                           <i class="ico ico-minus"></i>
                           <span class="txt-hidden">빼기</span>
                         </button>
@@ -494,7 +505,7 @@
                         <!-- 중분류 내 리스트 -->
                         <div class="sub-categ-btn">
                           <span class="txt">김민지</span>
-                          <button type="button" class="btn-right">
+                          <button type="button" class="btn-right type-minus">
                             <i class="ico ico-minus"></i>
                             <span class="txt-hidden">빼기</span>
                           </button>
@@ -505,7 +516,7 @@
                         <!-- 중분류 내 리스트 -->
                         <div class="sub-categ-btn">
                           <span class="txt">김민우</span>
-                          <button type="button" class="btn-right">
+                          <button type="button" class="btn-right type-minus">
                             <i class="ico ico-minus"></i>
                             <span class="txt-hidden">빼기</span>
                           </button>
@@ -516,7 +527,7 @@
                         <!-- 중분류 내 리스트 -->
                         <div class="sub-categ-btn">
                           <span class="txt">김기범</span>
-                          <button type="button" class="btn-right">
+                          <button type="button" class="btn-right type-minus">
                             <i class="ico ico-minus"></i>
                             <span class="txt-hidden">빼기</span>
                           </button>
@@ -570,17 +581,19 @@
               <div class="form-item">
                 <label class="form-label">반 이름</label>
                 <div class="form-inp-wrap">
-                  <input type="text" value="도원고등학교" placeholder="신규반 이름을 입력해주세요." class="form-inp type-h35">
+                  <input type="text" value="도원고등학교" readonly placeholder="신규반 이름을 입력해주세요." class="form-inp type-h35">
                 </div>
-              </div>
-              <div class="inp-btn-grp type-search">
-                <input type="text" class="form-inp type-h35" placeholder="학생 이름 검색">
-                <button type="button" class="ylw-bd-btn inp-btn">검색</button>
               </div>
               <div class="stud-list-layout">
 
                 <!-- 왼쪽 -->
                 <div class="stud-list-left">
+                  <div class="inp-btn-grp-wrapper">
+                    <div class="inp-btn-grp type-search">
+                      <input type="text" class="form-inp type-h35" placeholder="학생 이름 검색">
+                      <button type="button" class="ylw-bd-btn inp-btn">검색</button>
+                    </div>
+                  </div>
                   <div class="stud-list-left-content">
                     <div class="categ-grp">
 
@@ -712,7 +725,7 @@
                 <!-- 오른쪽 -->
                 <div class="stud-list-right">
                   <div class="stud-list-right-top">
-                    <span class="ttl">반 학생 명단</span>
+                    <span class="ttl">도원고등학교</span>
                   </div>
                   <div class="stud-list-right-content">
                     <div class="categ-grp active">
@@ -724,7 +737,7 @@
                           <h3 class="txt">중 3</h3>
                           <p class="gray-txt">(1명)</p>
                         </button>
-                        <button type="button" class="btn-right">
+                        <button type="button" class="btn-right type-minus">
                           <i class="ico ico-minus"></i>
                           <span class="txt-hidden">빼기</span>
                         </button>
@@ -738,7 +751,7 @@
                         <!-- 중분류 내 리스트 -->
                         <div class="sub-categ-btn">
                           <span class="txt">김민지</span>
-                          <button type="button" class="btn-right">
+                          <button type="button" class="btn-right type-minus">
                             <i class="ico ico-minus"></i>
                             <span class="txt-hidden">빼기</span>
                           </button>
@@ -758,7 +771,7 @@
                           <h3 class="txt">2A</h3>
                           <p class="gray-txt">(3명)</p>
                         </button>
-                        <button type="button" class="btn-right">
+                        <button type="button" class="btn-right type-minus">
                           <i class="ico ico-minus"></i>
                           <span class="txt-hidden">빼기</span>
                         </button>
@@ -772,7 +785,7 @@
                         <!-- 중분류 내 리스트 -->
                         <div class="sub-categ-btn">
                           <span class="txt">김민지</span>
-                          <button type="button" class="btn-right">
+                          <button type="button" class="btn-right type-minus">
                             <i class="ico ico-minus"></i>
                             <span class="txt-hidden">빼기</span>
                           </button>
@@ -783,7 +796,7 @@
                         <!-- 중분류 내 리스트 -->
                         <div class="sub-categ-btn">
                           <span class="txt">김민우</span>
-                          <button type="button" class="btn-right">
+                          <button type="button" class="btn-right type-minus">
                             <i class="ico ico-minus"></i>
                             <span class="txt-hidden">빼기</span>
                           </button>
@@ -794,7 +807,7 @@
                         <!-- 중분류 내 리스트 -->
                         <div class="sub-categ-btn">
                           <span class="txt">김기범</span>
-                          <button type="button" class="btn-right">
+                          <button type="button" class="btn-right type-minus">
                             <i class="ico ico-minus"></i>
                             <span class="txt-hidden">빼기</span>
                           </button>

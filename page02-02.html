@@ -19,7 +19,7 @@
         <div class="header-top">
           <div class="header-inner">
             <h1 class="logo">
-              <a href="company.html">
+              <a href="support.html">
                 <img src="gpt-tutor/assets/images/logo.svg" alt="TITAN">
               </a>
             </h1>
@@ -43,6 +43,8 @@
                         <h5 class="top-ttl">알림</h5>
                       </div>
                       <div class="amodal-content">
+
+                        <!-- TODO: 알림 있을 때 -->
                         <div class="alarm-list-grp">
                           <div class="alarm-list">
                             <span class="time">오전 11:54</span>
@@ -59,6 +61,11 @@
                             <h6 class="name">김민우</h6>
                             <p class="txt">(자동 채점) 변형문제(문제),시험지명:·····</p>
                           </div>
+                        </div>
+
+                        <!-- TODO: 알림 없을 때 -->
+                        <div class="nothing-alarm" style="display: none;">
+                          <p class="txt">아직 일정이 없어요.</p>
                         </div>
                       </div>
                     </div>
@@ -132,6 +139,7 @@
                     <a href="company.html" class="list-btn">회사소개</a>
                     <a href="support.html" class="list-btn">고객센터</a>
                     <a href="account.html" class="list-btn">계정정보</a>
+                    <a href="login.html" class="list-btn">로그아웃</a>
                   </div>
                 </div>
               </div>
@@ -151,7 +159,7 @@
           <div class="header-gnb-to-snb type-02">
             <div class="header-snb-grp">
               <a href="page02-01.html" class="snb ">반별 출제현황</a>
-              <a href="page02-02.html" class="snb active">학생별 오답처리</a>
+              <a href="page02-02.html" class="snb active">학생별 오답관리</a>
             </div>
           </div>
           <div class="header-gnb-to-snb type-03">
@@ -204,13 +212,23 @@
         <!-- 왼쪽 사이드바 -->
         <div class="major-sidebar">
           <div class="major-sidebar-top">
-            <h1 class="major-sidebar-ttl">도안고 1-A반</h1>
+            <h1 class="major-sidebar-ttl">
+              <i class="ico ico-student"></i>
+              김정식 (예비고반)
+            </h1>
           </div>
           <div class="tabs">
             <button type="button" class="tab" onclick="location.href='page02-01.html';">반</button>
             <button type="button" class="tab active">학생</button>
           </div>
           <div class="major-sidebar-bottom">
+            <div class="checkbox-item-wrap">
+              <div class="checkbox-item">
+                <input type="checkbox" name="class" id="all" class="custom-checkbox-inp none">
+                <label for="all" class="custom-checkbox"></label>
+                <label for="all" class="custom-checkbox-txt">전체열기</label>
+              </div>
+            </div>
 
             <!-- TODO: 해당 리스트가 활성화되면 active 클래스가 붙습니다. -->
             <div class="categ-grp active">
@@ -338,8 +356,10 @@
             <div class="tbl-top-opt-container">
               <div class="opt-wrap">
                 <select class="form-inp type-h35">
-                  <option value="시험중">시험중</option>
-                  <option value="시험중">시험중</option>
+                  <option value="변형">변형</option>
+                  <option value="단어">단어</option>
+                  <option value="외부">외부</option>
+                  <option value="재시험">재시험</option>
                 </select>
               </div>
               <div class="opt-wrap type-mgleft">
@@ -357,9 +377,9 @@
               <div class="tbl-head">
                 <div class="tbl-cell"></div>
                 <div class="tbl-cell">응시일</div>
-                <div class="tbl-cell">시험지 제목</div>
+                <div class="tbl-cell">시험지</div>
                 <div class="tbl-cell">출제범위</div>
-                <div class="tbl-cell">미리보기</div>
+                <div class="tbl-cell">오답보기</div>
                 <div class="tbl-cell">합격여부 (정답률)</div>
                 <div class="tbl-cell">재시험 횟수</div>
                 <div class="tbl-cell">더보기</div>
@@ -376,7 +396,7 @@
                     24.01.01
                   </div>
                   <div class="tbl-cell">
-                    <span class="blue-txt">[변형]</span>
+                    <span class="pink-txt">[변형]</span>
                     <span>도안고 1 중간고사</span>
                   </div>
                   <div class="tbl-cell">
@@ -403,7 +423,95 @@
                         <div class="hover-set-lists">
                           <button type="button" class="list-btn" onclick="openModal('incorrect-analyze-popup');">오답분석</button>
                           <button type="button" class="list-btn">다운로드</button>
-                          <button type="button" class="list-btn">삭제</button>
+                          <button type="button" class="list-btn" onclick="openModal('confirm-del-modal');">삭제</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tbl-row">
+                  <div class="tbl-cell">
+                    <div class="checkbox-item">
+                      <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
+                      <label for="class01" class="custom-checkbox"></label>
+                    </div>
+                  </div>
+                  <div class="tbl-cell">
+                    24.01.01
+                  </div>
+                  <div class="tbl-cell">
+                    <span class="mint-txt">[단어]</span>
+                    <span>도안고 1 중간고사</span>
+                  </div>
+                  <div class="tbl-cell">
+                    교과서 4, 5과
+                  </div>
+                  <div class="tbl-cell">
+                    <button type="button" class="ico-btn" onclick="openModal('incorrect-view-popup');">
+                      <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
+                    </button>
+                  </div>
+                  <div class="tbl-cell">
+                    합격 (90%)
+                  </div>
+                  <div class="tbl-cell">
+                    O
+                  </div>
+                  <div class="tbl-cell">
+                    <div class="hover-set">
+                      <button type="button" class="hover-set-btn">
+                        <i class="ico ico-verti-dots"></i>
+                        <span class="txt-hidden">더보기</span>
+                      </button>
+                      <div class="hover-set-lists-wrap">
+                        <div class="hover-set-lists">
+                          <button type="button" class="list-btn" onclick="openModal('incorrect-analyze-popup');">오답분석</button>
+                          <button type="button" class="list-btn">다운로드</button>
+                          <button type="button" class="list-btn" onclick="openModal('confirm-del-modal');">삭제</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tbl-row">
+                  <div class="tbl-cell">
+                    <div class="checkbox-item">
+                      <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
+                      <label for="class01" class="custom-checkbox"></label>
+                    </div>
+                  </div>
+                  <div class="tbl-cell">
+                    24.01.01
+                  </div>
+                  <div class="tbl-cell">
+                    <span class="blue-txt">[외부]</span>
+                    <span>도안고 1 중간고사</span>
+                  </div>
+                  <div class="tbl-cell">
+                    교과서 4, 5과
+                  </div>
+                  <div class="tbl-cell">
+                    <button type="button" class="ico-btn" onclick="openModal('incorrect-view-popup');">
+                      <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
+                    </button>
+                  </div>
+                  <div class="tbl-cell">
+                    합격 (90%)
+                  </div>
+                  <div class="tbl-cell">
+                    O
+                  </div>
+                  <div class="tbl-cell">
+                    <div class="hover-set">
+                      <button type="button" class="hover-set-btn">
+                        <i class="ico ico-verti-dots"></i>
+                        <span class="txt-hidden">더보기</span>
+                      </button>
+                      <div class="hover-set-lists-wrap">
+                        <div class="hover-set-lists">
+                          <button type="button" class="list-btn" onclick="openModal('incorrect-analyze-popup');">오답분석</button>
+                          <button type="button" class="list-btn">다운로드</button>
+                          <button type="button" class="list-btn" onclick="openModal('confirm-del-modal');">삭제</button>
                         </div>
                       </div>
                     </div>
@@ -415,7 +523,7 @@
                 <div class="bar-btns">
                   <button type="button" class="bar-btn" onclick="openModal('incorrect-analyze-popup');">오답분석</button>
                   <button type="button" class="bar-btn">다운로드</button>
-                  <button type="button" class="bar-btn">삭제</button>
+                  <button type="button" class="bar-btn" onclick="openModal('confirm-del-modal');">삭제</button>
                 </div>
               </div>
             </div>
@@ -462,6 +570,50 @@
                       <span class="txt">해설</span>
                     </div>
                   </div>
+                  <div class="tbl-row">
+                    <div class="tbl-cell">
+                      <p class="txt">문제 2 (출력물 문제)</p>
+                    </div>
+                    <div class="tbl-cell">
+                      <span class="txt">1</span>
+                    </div>
+                    <div class="tbl-cell">
+                      <span class="txt">해설</span>
+                    </div>
+                  </div>
+                  <div class="tbl-row">
+                    <div class="tbl-cell">
+                      <p class="txt">문제 3 (출력물 문제)</p>
+                    </div>
+                    <div class="tbl-cell">
+                      <span class="txt">1</span>
+                    </div>
+                    <div class="tbl-cell">
+                      <span class="txt">해설</span>
+                    </div>
+                  </div>
+                  <div class="tbl-row">
+                    <div class="tbl-cell">
+                      <p class="txt">문제 4 (출력물 문제)</p>
+                    </div>
+                    <div class="tbl-cell">
+                      <span class="txt">1</span>
+                    </div>
+                    <div class="tbl-cell">
+                      <span class="txt">해설</span>
+                    </div>
+                  </div>
+                  <div class="tbl-row">
+                    <div class="tbl-cell">
+                      <p class="txt">문제 5 (출력물 문제)</p>
+                    </div>
+                    <div class="tbl-cell">
+                      <span class="txt">1</span>
+                    </div>
+                    <div class="tbl-cell">
+                      <span class="txt">해설</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -471,7 +623,7 @@
             <!-- 모달 끝쪽 버튼 -->
             <div class="nmodal-btn-wrap">
               <button type="button" class="ylw-solid-btn modal-btn">
-                <span class="txt">재시험 발송</span>
+                <span class="txt">유사문제 재시험 발송</span>
               </button>
               <button type="button" class="ylw-bd-btn02 modal-btn">
                 <span class="txt">확인</span>
@@ -520,65 +672,76 @@
               </div>
               <div class="inner-content">
                 <div class="ttl-desc-wrap">
-                  <h6 class="ttl">변형 문제</h6>
-                  <p class="desc">약점 유형 TOP 5</p>
                 </div>
                 <div class="border-box">
-                  <div class="name-circle-list type-02 type-blue">
-                    <span class="name">제목 (5/50)</span>
-                    <div class="in-circle">
-                      <p class="in-top-txt">유형 정답률</p>
-                      <b class="in-txt">98%</b>
-                    </div>
+                  <div class="border-box-ttl">
+                    <h6 class="bd-box-ttl">변형 문제</h6>
                   </div>
-                  <div class="name-circle-list type-02 type-ylw">
-                    <span class="name">제목 (5/50)</span>
-                    <div class="in-circle">
-                      <p class="in-top-txt">유형 정답률</p>
-                      <b class="in-txt">98%</b>
-                    </div>
-                  </div>
-                  <div class="name-circle-list type-02 type-green">
-                    <span class="name">제목 (5/50)</span>
-                    <div class="in-circle">
-                      <p class="in-top-txt">유형 정답률</p>
-                      <b class="in-txt">98%</b>
-                    </div>
-                  </div>
-                  <div class="name-circle-list type-02 type-purple">
-                    <span class="name">제목 (5/50)</span>
-                    <div class="in-circle">
-                      <p class="in-top-txt">유형 정답률</p>
-                      <b class="in-txt">98%</b>
-                    </div>
-                  </div>
-                  <div class="name-circle-list type-02 type-navy">
-                    <span class="name">자칭추론 (5/50)</span>
-                    <div class="in-circle">
-                      <p class="in-top-txt">유형 정답률</p>
-                      <b class="in-txt">98%</b>
+                  <div class="border-box-content">
+                    <p class="bd-box-desc">약점 유형 TOP 5</p>
+
+                    <!-- TODO: 5개씩 묶음입니다. 5개 초과할 시에 name-circle-list-grp 이 하나 더 추가됩니다. 근데 TOP 5라서 그럴일은 없겠습니다... -->
+                    <div class="name-circle-list-grp">
+                      <span class="row-ttl type-01">유형</span>
+                      <span class="row-ttl type-02">정답률</span>
+                      <div class="name-circle-list type-02 type-red">
+                        <span class="name">제목 (5/50)</span>
+                        <div class="in-circle">
+                          <b class="in-txt">10%</b>
+                        </div>
+                      </div>
+                      <div class="name-circle-list type-02 type-red">
+                        <span class="name">밑줄 (5/50)</span>
+                        <div class="in-circle">
+                          <b class="in-txt">10%</b>
+                        </div>
+                      </div>
+                      <div class="name-circle-list type-02 type-red">
+                        <span class="name">빈칸 (10/50)</span>
+                        <div class="in-circle">
+                          <b class="in-txt">20%</b>
+                        </div>
+                      </div>
+                      <div class="name-circle-list type-02 type-red">
+                        <span class="name">요지 (25/50)</span>
+                        <div class="in-circle">
+                          <b class="in-txt">50%</b>
+                        </div>
+                      </div>
+                      <div class="name-circle-list type-02 type-red">
+                        <span class="name">지칭추론 (25/50)</span>
+                        <div class="in-circle">
+                          <b class="in-txt">50%</b>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="inner-content">
-                <div class="ttl-desc-wrap">
-                  <h6 class="ttl">단어</h6>
-                  <p class="desc">약점 유형 TOP 5</p>
-                </div>
                 <div class="border-box">
-                  <div class="name-circle-list type-02 type-blue">
-                    <span class="name">영영풀이 (5/50)</span>
-                    <div class="in-circle">
-                      <p class="in-top-txt">유형 정답률</p>
-                      <b class="in-txt">98%</b>
-                    </div>
+                  <div class="border-box-ttl">
+                    <h6 class="bd-box-ttl">단어</h6>
                   </div>
-                  <div class="name-circle-list type-02 type-ylw">
-                    <span class="name">영영풀이 (5/50)</span>
-                    <div class="in-circle">
-                      <p class="in-top-txt">유형 정답률</p>
-                      <b class="in-txt">98%</b>
+                  <div class="border-box-content">
+                    <p class="bd-box-desc">약점 유형 TOP 5</p>
+
+                    <!-- TODO: 5개씩 묶음입니다. 5개 초과할 시에 name-circle-list-grp 이 하나 더 추가됩니다. 근데 TOP 5라서 그럴일은 없겠습니다... -->
+                    <div class="name-circle-list-grp">
+                      <span class="row-ttl type-01">유형</span>
+                      <span class="row-ttl type-02">정답률</span>
+                      <div class="name-circle-list type-02 type-red">
+                        <span class="name">영영풀이 (10/50)</span>
+                        <div class="in-circle">
+                          <b class="in-txt">20%</b>
+                        </div>
+                      </div>
+                      <div class="name-circle-list type-02 type-red">
+                        <span class="name">유의어 (15/50)</span>
+                        <div class="in-circle">
+                          <b class="in-txt">30%</b>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -602,6 +765,22 @@
         </div>
 
         <!-- END 2. 오답분석 팝업 -->
+
+        <!-- 3. 삭제 확인 모달 -->
+        <div id="confirm-del-modal" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('confirm-del-modal');"></div>
+          <div class="custom-modal system-modal">
+            <div class="custom-modal-content">
+              <p class="txt">정말 삭제하시겠습니까?</p>
+            </div>
+            <div class="custom-modal-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-md">확인</button>
+              <button type="button" class="gray-bd-btn square-btn btn-md" onclick="closeModal('confirm-del-modal');">취소</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 3. 삭제 확인 모달 -->
       </div>
     </div>
     <script src="gpt-tutor/assets/js/ui.js"></script>

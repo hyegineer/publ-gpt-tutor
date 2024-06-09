@@ -19,7 +19,7 @@
         <div class="header-top">
           <div class="header-inner">
             <h1 class="logo">
-              <a href="company.html">
+              <a href="support.html">
                 <img src="gpt-tutor/assets/images/logo.svg" alt="TITAN">
               </a>
             </h1>
@@ -43,6 +43,8 @@
                         <h5 class="top-ttl">알림</h5>
                       </div>
                       <div class="amodal-content">
+
+                        <!-- TODO: 알림 있을 때 -->
                         <div class="alarm-list-grp">
                           <div class="alarm-list">
                             <span class="time">오전 11:54</span>
@@ -59,6 +61,11 @@
                             <h6 class="name">김민우</h6>
                             <p class="txt">(자동 채점) 변형문제(문제),시험지명:·····</p>
                           </div>
+                        </div>
+
+                        <!-- TODO: 알림 없을 때 -->
+                        <div class="nothing-alarm" style="display: none;">
+                          <p class="txt">아직 일정이 없어요.</p>
                         </div>
                       </div>
                     </div>
@@ -132,6 +139,7 @@
                     <a href="company.html" class="list-btn">회사소개</a>
                     <a href="support.html" class="list-btn">고객센터</a>
                     <a href="account.html" class="list-btn">계정정보</a>
+                    <a href="login.html" class="list-btn">로그아웃</a>
                   </div>
                 </div>
               </div>
@@ -151,7 +159,7 @@
           <div class="header-gnb-to-snb type-02">
             <div class="header-snb-grp">
               <a href="page02-01.html" class="snb active">반별 출제현황</a>
-              <a href="page02-02.html" class="snb ">학생별 오답처리</a>
+              <a href="page02-02.html" class="snb ">학생별 오답관리</a>
             </div>
           </div>
           <div class="header-gnb-to-snb type-03">
@@ -204,13 +212,23 @@
         <!-- 왼쪽 사이드바 -->
         <div class="major-sidebar">
           <div class="major-sidebar-top">
-            <h1 class="major-sidebar-ttl">도안고 1-A반</h1>
+            <h1 class="major-sidebar-ttl">
+              <i class="ico ico-students"></i>
+              도안고 1-A반
+            </h1>
           </div>
           <div class="tabs">
             <button type="button" class="tab active">반</button>
             <button type="button" class="tab" onclick="location.href='page02-02.html';">학생</button>
           </div>
           <div class="major-sidebar-bottom">
+            <div class="checkbox-item-wrap">
+              <div class="checkbox-item">
+                <input type="checkbox" name="class" id="all" class="custom-checkbox-inp none">
+                <label for="all" class="custom-checkbox"></label>
+                <label for="all" class="custom-checkbox-txt">전체열기</label>
+              </div>
+            </div>
 
             <!-- TODO: 해당 리스트가 활성화되면 active 클래스가 붙습니다. -->
             <div class="categ-grp active">
@@ -339,7 +357,7 @@
               <div class="opt-wrap">
                 <select class="form-inp type-h35">
                   <option value="시험중">시험중</option>
-                  <option value="시험중">시험중</option>
+                  <option value="시험완료">시험완료</option>
                 </select>
               </div>
               <div class="opt-wrap type-mgleft">
@@ -359,7 +377,7 @@
                 <div class="tbl-cell">현황</div>
                 <div class="tbl-cell">출제일</div>
                 <div class="tbl-cell">마감일</div>
-                <div class="tbl-cell">시험지 제목</div>
+                <div class="tbl-cell">시험지</div>
                 <div class="tbl-cell">출제범위</div>
                 <div class="tbl-cell">미리보기</div>
                 <div class="tbl-cell">응시현황</div>
@@ -384,7 +402,7 @@
                     24.03.01
                   </div>
                   <div class="tbl-cell">
-                    <span class="blue-txt">[변형]</span>
+                    <span class="pink-txt">[변형]</span>
                     <span>도안고 1 중간고사</span>
                   </div>
                   <div class="tbl-cell">
@@ -396,7 +414,109 @@
                     </button>
                   </div>
                   <div class="tbl-cell">
-                    6/8
+                    <b class="bold-cnt" onclick="openModal('exam-status-popup');">6/8</b>
+                  </div>
+                  <div class="tbl-cell">
+                    80%
+                  </div>
+                  <div class="tbl-cell">
+                    <div class="hover-set">
+                      <button type="button" class="hover-set-btn">
+                        <i class="ico ico-verti-dots"></i>
+                        <span class="txt-hidden">더보기</span>
+                      </button>
+                      <div class="hover-set-lists-wrap">
+                        <div class="hover-set-lists">
+                          <button type="button" class="list-btn">동일 시험지 보내기</button>
+                          <button type="button" class="list-btn">시험 종료</button>
+                          <button type="button" class="list-btn">다운로드</button>
+                          <button type="button" class="list-btn">시험 취소</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tbl-row">
+                  <div class="tbl-cell">
+                    <div class="checkbox-item">
+                      <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
+                      <label for="class01" class="custom-checkbox"></label>
+                    </div>
+                  </div>
+                  <div class="tbl-cell">
+                    시험중
+                  </div>
+                  <div class="tbl-cell">
+                    24.01.01
+                  </div>
+                  <div class="tbl-cell">
+                    24.03.01
+                  </div>
+                  <div class="tbl-cell">
+                    <span class="mint-txt">[단어]</span>
+                    <span>도안고 1 중간고사</span>
+                  </div>
+                  <div class="tbl-cell">
+                    교과서 4, 5과
+                  </div>
+                  <div class="tbl-cell">
+                    <button type="button" class="ico-btn" onclick="openModal('preview-modal01');">
+                      <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
+                    </button>
+                  </div>
+                  <div class="tbl-cell">
+                    <b class="bold-cnt" onclick="openModal('exam-status-popup');">6/8</b>
+                  </div>
+                  <div class="tbl-cell">
+                    80%
+                  </div>
+                  <div class="tbl-cell">
+                    <div class="hover-set">
+                      <button type="button" class="hover-set-btn">
+                        <i class="ico ico-verti-dots"></i>
+                        <span class="txt-hidden">더보기</span>
+                      </button>
+                      <div class="hover-set-lists-wrap">
+                        <div class="hover-set-lists">
+                          <button type="button" class="list-btn">동일 시험지 보내기</button>
+                          <button type="button" class="list-btn">시험 종료</button>
+                          <button type="button" class="list-btn">다운로드</button>
+                          <button type="button" class="list-btn">시험 취소</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tbl-row">
+                  <div class="tbl-cell">
+                    <div class="checkbox-item">
+                      <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
+                      <label for="class01" class="custom-checkbox"></label>
+                    </div>
+                  </div>
+                  <div class="tbl-cell">
+                    시험중
+                  </div>
+                  <div class="tbl-cell">
+                    24.01.01
+                  </div>
+                  <div class="tbl-cell">
+                    24.03.01
+                  </div>
+                  <div class="tbl-cell">
+                    <span class="blue-txt">[외부]</span>
+                    <span>도안고 1 중간고사</span>
+                  </div>
+                  <div class="tbl-cell">
+                    교과서 4, 5과
+                  </div>
+                  <div class="tbl-cell">
+                    <button type="button" class="ico-btn" onclick="openModal('preview-modal01');">
+                      <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
+                    </button>
+                  </div>
+                  <div class="tbl-cell">
+                    <b class="bold-cnt" onclick="openModal('exam-status-popup');">6/8</b>
                   </div>
                   <div class="tbl-cell">
                     80%
@@ -438,13 +558,13 @@
 
         <!-- 응시현황 팝업 -->
         <div id="exam-status-popup" class="modal-wrapper">
-          <div class="modal-overlay" onclick="closeModal('exam-status-modal');"></div>
+          <div class="modal-overlay" onclick="closeModal('exam-status-popup');"></div>
           <div class="custom-modal exam-status-modal">
 
             <!-- 모달 제목 -->
             <div class="nmodal-ttl-wrap">
               <h6 class="nmodal-ttl">응시현황</h6>
-              <button type="button" class="ico-btn close-btn" onclick="closeModal('exam-status-modal');">
+              <button type="button" class="ico-btn close-btn" onclick="closeModal('exam-status-popup');">
                 <i class="ico ico-x"></i>
                 <span class="txt-hidden">닫기</span>
               </button>
@@ -557,6 +677,10 @@
     <script>
       $('.major-sidebar .categ-btn').on('click', function() {
         $(this).parent('.categ-grp').toggleClass('active');
+      })
+      // 응시현황 클릭시 bold 해제하려면 active 클래스 추가
+      $('.bold-cnt').on('click', function() {
+        $(this).addClass('active');
       })
     </script>
   </body>

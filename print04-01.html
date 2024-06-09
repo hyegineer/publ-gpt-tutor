@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="gpt-tutor/assets/css/print-style.css">
     <script src="gpt-tutor/assets/js/vendor/jquery-3.6.1.min.js"></script>
   </head>
+  <style>
+    ::-webkit-scrollbar {
+      background-color: transparent;
+      width: 15px;
+    }
+  </style>
   <body>
     <div id="app">
 
@@ -22,6 +28,10 @@
 
           <!-- 표지 내용 영역 -->
           <div class="print-content-wrap">
+            <div class="checkbox-item">
+              <input type="checkbox" name="range" id="print0401-01" class="custom-checkbox-inp none">
+              <label for="print0401-01" class="custom-checkbox"></label>
+            </div>
             <div class="writing-ttl-wrap">
               <input type="text" value="수업용 PPT" placeholder="대제목을 입력해주세요" class="writing-ttl">
               <input type="text" value="직접 입력 a_a_a_a_a" placeholder="소제목을 입력해주세요" class="writing-desc">
@@ -40,6 +50,10 @@
 
           <!-- 표지 내용 영역 -->
           <div class="print-content-wrap">
+            <div class="checkbox-item">
+              <input type="checkbox" name="range" id="print0401-02" class="custom-checkbox-inp none">
+              <label for="print0401-02" class="custom-checkbox"></label>
+            </div>
             <div class="writing-content-grp">
               <div class="writing-content">
                 <span class="num-ttl">1</span>

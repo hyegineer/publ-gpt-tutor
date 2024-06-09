@@ -19,7 +19,7 @@
         <div class="header-top">
           <div class="header-inner">
             <h1 class="logo">
-              <a href="company.html">
+              <a href="support.html">
                 <img src="gpt-tutor/assets/images/logo.svg" alt="TITAN">
               </a>
             </h1>
@@ -43,6 +43,8 @@
                         <h5 class="top-ttl">알림</h5>
                       </div>
                       <div class="amodal-content">
+
+                        <!-- TODO: 알림 있을 때 -->
                         <div class="alarm-list-grp">
                           <div class="alarm-list">
                             <span class="time">오전 11:54</span>
@@ -59,6 +61,11 @@
                             <h6 class="name">김민우</h6>
                             <p class="txt">(자동 채점) 변형문제(문제),시험지명:·····</p>
                           </div>
+                        </div>
+
+                        <!-- TODO: 알림 없을 때 -->
+                        <div class="nothing-alarm" style="display: none;">
+                          <p class="txt">아직 일정이 없어요.</p>
                         </div>
                       </div>
                     </div>
@@ -132,6 +139,7 @@
                     <a href="company.html" class="list-btn">회사소개</a>
                     <a href="support.html" class="list-btn">고객센터</a>
                     <a href="account.html" class="list-btn">계정정보</a>
+                    <a href="login.html" class="list-btn">로그아웃</a>
                   </div>
                 </div>
               </div>
@@ -151,7 +159,7 @@
           <div class="header-gnb-to-snb type-02">
             <div class="header-snb-grp">
               <a href="page02-01.html" class="snb ">반별 출제현황</a>
-              <a href="page02-02.html" class="snb ">학생별 오답처리</a>
+              <a href="page02-02.html" class="snb ">학생별 오답관리</a>
             </div>
           </div>
           <div class="header-gnb-to-snb type-03">
@@ -203,18 +211,24 @@
         <div class="auth-wrapper">
           <div class="auth-container">
             <div class="logo-wrap">
-              <img src="gpt-tutor/assets/images/company-intro-logo.png" alt="">
+              <img src="gpt-tutor/assets/images/logo.svg" alt="">
               <h2 class="ttl">LOGIN</h2>
             </div>
             <div class="form-wrap">
               <input type="text" class="form-inp" placeholder="아이디를 입력해주세요" />
               <input type="password" autocomplete="off" class="form-inp" placeholder="비밀번호를 입력해주세요" />
               <div class="login-opt">
+                <div class="checkbox-item">
+                  <input type="checkbox" id="auto-login" class="custom-checkbox-inp none">
+                  <label for="auto-login" class="custom-checkbox"></label>
+                  <label for="auto-login" class="dark-txt">자동로그인</label>
+                </div>
                 <button type="button" class="txt-btn" onclick="openModal('find-pwd-modal');">비밀번호 찾기</button>
               </div>
             </div>
             <div class="form-btn-wrap">
-              <button onclick="openModal('invite-modal');" type="button" class="ylw-solid-btn square-btn btn-lg"><span class="txt">로그인</span></button>
+              <button onclick="openModal('invite-modal');" type="button" class="ylw-solid-btn square-btn btn-lg"><span
+                class="txt">로그인</span></button>
               <a href="register.html" class="gray-bd-btn square-btn btn-lg"><span class="txt">회원가입</span></a>
               <button onclick="openModal('invite-modal');" type="button" class="gray-bd-btn square-btn btn-lg">
                 <img src="gpt-tutor/assets/images/ico-kakao.svg" alt="">
