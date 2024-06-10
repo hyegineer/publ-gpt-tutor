@@ -151,8 +151,8 @@
         <div class="header-middle">
           <div class="header-gnb-to-snb type-01 active">
             <div class="header-snb-grp">
-              <a href="tab01-textbook.html" class="snb ">강의자료</a>
-              <a href="tab02-textbook.html" class="snb active">변형문제</a>
+              <a href="tab01-textbook.html" class="snb active">강의자료</a>
+              <a href="tab02-textbook.html" class="snb ">변형문제</a>
               <a href="page01-01.html" class="snb ">외부문제 보내기</a>
             </div>
           </div>
@@ -212,12 +212,12 @@
         <!-- 왼쪽 사이드바 -->
         <div class="major-sidebar">
           <div class="major-sidebar-top">
-            <h1 class="major-sidebar-ttl">변형문제</h1>
+            <h1 class="major-sidebar-ttl">강의자료</h1>
           </div>
           <div class="major-sidebar-bottom">
             <div class="major-sidebar-menu-container">
 
-              <!-- 변형문제 사이드바 -->
+              <!-- 강의자료 사이드바 -->
               <ul class="major-sidebar-menu-list-grp ">
 
                 <!-- 사이드바 메뉴 1. 교과서 -->
@@ -435,7 +435,7 @@
 
                 <!-- 사이드바 메뉴 2. 모의고사 -->
                 <li class="major-sidebar-menu-list ">
-                  <a href="tab02-mockExam.html" class="menu">
+                  <a href="tab01-mockExam.html" class="menu">
                     <i class="ico">
                       <img src="gpt-tutor/assets/images/ico-menu02-color.svg" alt="" class="ico-color">
                       <img src="gpt-tutor/assets/images/ico-menu02-gray.svg" alt="" class="ico-gray">
@@ -570,8 +570,8 @@
                 <!-- END 사이드바 메뉴 2. 모의고사 -->
 
                 <!-- 사이드바 메뉴 3. EBS -->
-                <li class="major-sidebar-menu-list ">
-                  <a href="tab02-ebs.html" class="menu">
+                <li class="major-sidebar-menu-list active">
+                  <a href="tab01-ebs.html" class="menu">
                     <i class="ico">
                       <img src="gpt-tutor/assets/images/ico-menu03-color.svg" alt="" class="ico-color">
                       <img src="gpt-tutor/assets/images/ico-menu03-gray.svg" alt="" class="ico-gray">
@@ -637,7 +637,7 @@
                 <!-- 활성화되었을 때 (active 클래스 달렸을 때) 편집 버튼 보입니다 -->
                 <li class="major-sidebar-menu-list ">
                   <div class="menu">
-                    <a href="tab02-myPrintFile.html">
+                    <a href="tab01-myPrintFile.html">
                       <i class="ico">
                         <img src="gpt-tutor/assets/images/ico-menu04-color.svg" alt="" class="ico-color">
                         <img src="gpt-tutor/assets/images/ico-menu04-gray.svg" alt="" class="ico-gray">
@@ -655,14 +655,14 @@
                       <div class="sub-menu-btn-align">
                         <button type="button" class="sub-menu-btn">2023</button>
                         <div class="edit-btns">
-                          <button type="button" class="btn ylw-bd-btn btn-xsm" onclick="event.stopPropagation();location.href='tab02-myPrintFileEdit.html';">변경</button>
+                          <button type="button" class="btn ylw-bd-btn btn-xsm" onclick="location.href='tab01-myPrintFileEdit.html';">변경</button>
                           <button type="button" class="btn red-bd-btn btn-xsm" onclick="openModal('del-check-modal');">삭제</button>
                         </div>
                       </div>
                       <div class="sub-menu-btn-align">
                         <button type="button" class="sub-menu-btn">2022</button>
                         <div class="edit-btns">
-                          <button type="button" class="btn ylw-bd-btn btn-xsm" onclick="event.stopPropagation();location.href='tab02-myPrintFileEdit.html';">변경</button>
+                          <button type="button" class="btn ylw-bd-btn btn-xsm" onclick="location.href='tab01-myPrintFileEdit.html';">변경</button>
                           <button type="button" class="btn red-bd-btn btn-xsm" onclick="openModal('del-check-modal');">삭제</button>
                         </div>
                       </div>
@@ -686,8 +686,8 @@
                 <!-- END 사이드바 메뉴 4. my 지문파일 -->
 
                 <!-- 사이드바 메뉴 5. 신규지문 등록 -->
-                <li class="major-sidebar-menu-list active">
-                  <a href="tab02-enrollPrintFile.html" class="menu">
+                <li class="major-sidebar-menu-list ">
+                  <a href="tab01-enrollPrintFile.html" class="menu">
                     <i class="ico">
                       <img src="gpt-tutor/assets/images/ico-menu05-color.svg" alt="" class="ico-color">
                       <img src="gpt-tutor/assets/images/ico-menu05-gray.svg" alt="" class="ico-gray">
@@ -697,170 +697,9 @@
                 </li>
 
                 <!-- END 사이드바 메뉴 5. 신규지문 등록 -->
-
-                <!-- 사이드바 메뉴 6. 시중 단어책 -->
-                <li class="major-sidebar-menu-list ">
-                  <a href="tab02-sellBook.html" class="menu">
-                    <i class="ico">
-                      <img src="gpt-tutor/assets/images/ico-menu06-color.svg" alt="" class="ico-color">
-                      <img src="gpt-tutor/assets/images/ico-menu06-gray.svg" alt="" class="ico-gray">
-                    </i>
-                    <span class="txt">시중 단어책</span>
-                  </a>
-
-                  <!-- 서브메뉴 -->
-                  <div class="major-sidebar-sub-menu">
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp active">
-                      <button type="button" class="sub-menu-btn">워드마스터 고등 어원</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-
-                          <!-- TODO: 클릭되어있는 메뉴는 active 클래스가 적용됩니다 -->
-                          <button type="button" class="more-btn active">- Day 1~40 + Day PLUS 1~40</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">워드마스터 고등 Basic (2023)</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Day 1~30 + Day PLUS 1~30</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">워드마스터 고등 Complete (2020)</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Day 1~30 + Day PLUS 1~30</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">워드마스터 수능2000 (2022)</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Day 1~50 + Day PLUS 1~50</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">워드마스터 하이퍼 2000 (2021)</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Day 1~50 + Day PLUS 1~50</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">해커스 보카 어원편</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Day 1~60</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">해커스 보카 고등 기본 (2022)</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Day 1~30</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">해커스 보카 수능필수2000 (2022)</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Day 1~50</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">해커스 보카 수능완성 1800 (2021)</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Day 1~45</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">능률 VOCA 어원편 </button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Day 1~60 + 혼동어휘</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">능률 VOCA 어원편 Lite (2022)</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Unit 1~35</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">능률 VOCA 고교기본 (2022)</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Day 1~45</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">능률 VOCA 고교필수 2000 (2023)</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Day 1~70</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
-                    <div class="sub-menu-grp">
-                      <button type="button" class="sub-menu-btn">능률 VOCA 고교필수편</button>
-                      <ul class="more-btn-list-grp">
-                        <li class="more-btn-list">
-                          <button type="button" class="more-btn">- Day 1~69</button>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <!-- END 서브메뉴 -->
-                </li>
-
-                <!-- END 사이드바 메뉴 6. 시중 단어책 -->
               </ul>
 
-              <!-- END 변형문제 사이드바 -->
+              <!-- END 강의자료 사이드바 -->
             </div>
           </div>
         </div>
@@ -895,23 +734,169 @@
 
                   <!-- 제목 -->
                   <div class="card-set-ttl">
-                    <h3 class="ttl">텍스트 입력</h3>
+                    <h3 class="ttl">지문</h3>
                   </div>
 
                   <!-- END 제목 -->
 
                   <!-- 카드 -->
-                  <div class="card inputtxt-card">
-                    <div class="textarea-wrap">
-                      <div class="selected-before">
-                        <textarea class="form-inp form-inp-textarea" placeholder="파일 또는 사진 업로드시 자동 작성 됩니다. 파일을 업로드하지 않을 경우 직접 입력해주세요."></textarea>
-                      </div>
+                  <div class="card printfile-card">
+                    <div class="left">
+                      <ul class="choice-list-grp">
+                        <li class="list">
+                          <input type="radio" name="teacher" checked id="teacher01" class="gray-label-inp none">
+                          <label for="teacher01" class="txt-wrap">
+                            <span class="dark-txt dot-txt">1과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher02" class="gray-label-inp none">
+                          <label for="teacher02" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">2과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher03" class="gray-label-inp none">
+                          <label for="teacher03" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">3과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher04" class="gray-label-inp none">
+                          <label for="teacher04" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">4과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher05" class="gray-label-inp none">
+                          <label for="teacher05" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">5과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher06" class="gray-label-inp none">
+                          <label for="teacher06" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">6과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher07" class="gray-label-inp none">
+                          <label for="teacher07" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">7과</span>
+                          </label>
+                        </li>
+
+                        <!-- <li class="list">
+                        <input type="radio" name="teacher" id="teacher08" class="gray-label-inp none">
+                        <label for="teacher08" class="txt-wrap gray-label">
+                          <span class="dark-txt dot-txt">8과</span>
+                        </label>
+                      </li> -->
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher09" class="gray-label-inp none">
+                          <label for="teacher09" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">9과</span>
+                          </label>
+                        </li>
+
+                        <!-- <li class="list">
+                        <input type="radio" name="teacher" id="teacher10" class="gray-label-inp none">
+                        <label for="teacher10" class="txt-wrap gray-label">
+                          <span class="dark-txt dot-txt">10과</span>
+                        </label>
+                      </li> -->
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher11" class="gray-label-inp none">
+                          <label for="teacher11" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">11과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher12" class="gray-label-inp none">
+                          <label for="teacher12" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">12과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher13" class="gray-label-inp none">
+                          <label for="teacher13" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">13과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher14" class="gray-label-inp none">
+                          <label for="teacher14" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">14과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher15" class="gray-label-inp none">
+                          <label for="teacher15" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">15과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher16" class="gray-label-inp none">
+                          <label for="teacher16" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">16과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher17" class="gray-label-inp none">
+                          <label for="teacher17" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">17과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher18" class="gray-label-inp none">
+                          <label for="teacher18" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">18과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher19" class="gray-label-inp none">
+                          <label for="teacher19" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">19과</span>
+                          </label>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="card-btn-wrap">
-                      <input type="file" id="file01" class="none">
-                      <label for="file01" class="btn-full ylw-solid-btn square-btn btn-md">
-                        <span class="txt">파일 선택 / 사진찍기</span>
-                      </label>
+                    <div class="right">
+                      <div class="checkbox-item">
+                        <input type="checkbox" name="range" id="range01" class="custom-checkbox-inp none">
+                        <label for="range01" class="custom-checkbox"></label>
+                        <label for="range01" class="dark-txt">전체선택</label>
+                      </div>
+                      <ul class="check-list-grp">
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01" class="custom-checkbox-inp none">
+                            <label for="range01" class="custom-checkbox"></label>
+                            <label for="range01" class="dark-txt">본문 1</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range02" class="custom-checkbox-inp none">
+                            <label for="range02" class="custom-checkbox"></label>
+                            <label for="range02" class="dark-txt">본문 2</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03" class="custom-checkbox-inp none">
+                            <label for="range03" class="custom-checkbox"></label>
+                            <label for="range03" class="dark-txt">본문 3</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range04" class="custom-checkbox-inp none">
+                            <label for="range04" class="custom-checkbox"></label>
+                            <label for="range04" class="dark-txt">본문 4</label>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
 
@@ -927,34 +912,56 @@
 
                   <!-- 제목 -->
                   <div class="card-set-ttl">
-                    <h3 class="ttl">폴더 선택</h3>
+                    <h3 class="ttl">출제범위</h3>
                   </div>
 
                   <!-- END 제목 -->
 
                   <!-- 카드 -->
-                  <div class="card flist-card">
+                  <div class="card range-card">
                     <div class="card-content">
-                      <ul class="flist-list-grp">
+                      <ul class="choice-list-grp">
                         <li class="list">
-                          <label class="flist-label">폴더 선택</label>
-                          <div class="flist-inp">
-                            <select class="form-inp form-inp-select inp-sm">
-                              <option value="">폴더 선택</option>
-                            </select>
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">2025 수능특강 영어</span>
+                            <span class="gray-txt sm-txt">(Part Ⅰ. 유형편)</span>
+                            <span class="dark-txt">/ 1과</span>
+                            <span class="dark-txt">/ 본문 1</span>
                           </div>
+                          <button type="button" class="right-btn">
+                            <span class="txt-hidden">삭제하기</span>
+                            <i class="ico ico-x"></i>
+                          </button>
                         </li>
                         <li class="list">
-                          <label class="flist-label">지문명 (제목)</label>
-                          <div class="flist-inp">
-                            <input type="text" class="form-inp inp-sm" placeholder="지문명 입력하세요">
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">2025 수능특강 영어</span>
+                            <span class="gray-txt sm-txt">(Part Ⅰ. 유형편)</span>
+                            <span class="dark-txt">/ 1과</span>
+                            <span class="dark-txt">/ 본문 2</span>
                           </div>
+                          <button type="button" class="right-btn">
+                            <span class="txt-hidden">삭제하기</span>
+                            <i class="ico ico-x"></i>
+                          </button>
+                        </li>
+                        <li class="list">
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">2025 수능특강 영어</span>
+                            <span class="gray-txt sm-txt">(Part Ⅰ. 유형편)</span>
+                            <span class="dark-txt">/ 1과</span>
+                            <span class="dark-txt">/ 본문 3</span>
+                          </div>
+                          <button type="button" class="right-btn">
+                            <span class="txt-hidden">삭제하기</span>
+                            <i class="ico ico-x"></i>
+                          </button>
                         </li>
                       </ul>
                     </div>
                     <div class="card-btn-wrap">
                       <button type="button" class="btn ylw-solid-btn square-btn btn-md">
-                        <span class="txt">완료</span>
+                        <span class="txt">선택완료</span>
                       </button>
                     </div>
                   </div>
@@ -969,6 +976,44 @@
         </div>
 
         <!-- END 오른쪽 컨텐츠 -->
+
+        <!-- 팝업 -->
+
+        <!-- 팝업 2-1. 로딩 모달 (미리보기) -->
+        <div id="loading-modal01" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('loading-modal01');"></div>
+          <div class="custom-modal loading-modal">
+            <div class="loading-modal-ttl">미리보기</div>
+            <div class="loading-modal-content">
+              <div class="spinner-box">
+                <span class="dbl-spinner"></span>
+                <span class="dbl-spinner dbl-spinner01"></span>
+              </div>
+              <p class="dark-txt">로딩중 <span>5</span>%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 2-1. 로딩 모달 (미리보기) -->
+
+        <!-- 팝업 2-2. 로딩 모달 (자료 생성 중) -->
+        <div id="loading-modal02" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('loading-modal02');"></div>
+          <div class="custom-modal loading-modal">
+            <div class="loading-modal-ttl">자료 생성 중</div>
+            <div class="loading-modal-content">
+              <div class="spinner-box">
+                <span class="dbl-spinner"></span>
+                <span class="dbl-spinner dbl-spinner01"></span>
+              </div>
+              <p class="dark-txt">로딩중 <span>5</span>%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 2-2. 로딩 모달 (자료 생성 중) -->
+
+        <!-- END 팝업 -->
       </div>
     </div>
     <script src="gpt-tutor/assets/js/ui.js"></script>

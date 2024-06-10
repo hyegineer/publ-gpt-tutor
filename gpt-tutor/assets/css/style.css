@@ -606,7 +606,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 80px;
+  gap: 50px;
 }
 .header-snb-grp .snb {
   font-size: 16px;
@@ -637,7 +637,7 @@ img {
   pointer-events: none;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateX(-34%) translateY(-50%);
 }
 
 .header-gnb-to-snb.active {
@@ -1983,6 +1983,10 @@ img {
 
 .mini-flist-list-grp .flist-inp.type-checkboxes .checkbox-item {
   width: calc((100% - 10px) / 2);
+}
+
+.mini-flist-list-grp .flist-inp.type-checkboxes .dark-txt {
+  font-size: 12px;
 }
 
 .mini-flist-list-grp .col-label-inp {
@@ -3619,6 +3623,7 @@ select.form-inp {
 }
 .incorrect-view-modal .default-tbl .tbl-body .tbl-row {
   border-bottom: 1px solid #DCE4E8;
+  align-items: stretch;
 }
 .incorrect-view-modal .default-tbl .tbl-cell:last-child {
   border-right: 0;

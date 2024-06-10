@@ -25,6 +25,16 @@ $('.sidebar-overlay').on('click', function() {
   $('#sidebar').removeClass('active');
   $(this).removeClass('active');
 })
+
+$('[data-iframe-src]').on('click', function () {
+  var thisSrc = $(this).attr('data-iframe-src');
+  var thisIframeId = $(this).parents('.modal-sidebar').attr('data-iframe-id');
+
+  $('[data-iframe-src]').removeClass('active');
+  $(this).addClass('active');
+
+  $('#' + thisIframeId).attr('src', thisSrc);
+})
 function openModal(id) {
   $('#' + id).addClass('active');
   $('#' + id).children('.custom-modal').scrollTop(0);
@@ -35,6 +45,12 @@ function closeModal(id) {
 function allCloseModal() {
   $('.modal-wrapper').removeClass('active');
 }
-$(".sub-menu-edit-btn").on('click', function () {
-  $(this).parents('.align-right').siblings('.edit-sub-menu-list-grp').children('.sub-menu-list').children('.btn-wrap').toggleClass('active');
+$('.major-sidebar .sub-menu-btn').on('click', function () {
+  $('.major-sidebar .sub-menu-grp').removeClass('active');
+  $(this).parents('.sub-menu-grp').addClass('active');
+})
+
+$('.major-sidebar .more-btn').on('click', function () {
+  $('.major-sidebar .more-btn').removeClass('active');
+  $(this).addClass('active');
 })

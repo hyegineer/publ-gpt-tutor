@@ -686,7 +686,7 @@
                 <!-- END 사이드바 메뉴 4. my 지문파일 -->
 
                 <!-- 사이드바 메뉴 5. 신규지문 등록 -->
-                <li class="major-sidebar-menu-list active">
+                <li class="major-sidebar-menu-list ">
                   <a href="tab02-enrollPrintFile.html" class="menu">
                     <i class="ico">
                       <img src="gpt-tutor/assets/images/ico-menu05-color.svg" alt="" class="ico-color">
@@ -699,7 +699,7 @@
                 <!-- END 사이드바 메뉴 5. 신규지문 등록 -->
 
                 <!-- 사이드바 메뉴 6. 시중 단어책 -->
-                <li class="major-sidebar-menu-list ">
+                <li class="major-sidebar-menu-list active">
                   <a href="tab02-sellBook.html" class="menu">
                     <i class="ico">
                       <img src="gpt-tutor/assets/images/ico-menu06-color.svg" alt="" class="ico-color">
@@ -895,23 +895,105 @@
 
                   <!-- 제목 -->
                   <div class="card-set-ttl">
-                    <h3 class="ttl">텍스트 입력</h3>
+                    <h3 class="ttl">지문</h3>
                   </div>
 
                   <!-- END 제목 -->
 
                   <!-- 카드 -->
-                  <div class="card inputtxt-card">
-                    <div class="textarea-wrap">
-                      <div class="selected-before">
-                        <textarea class="form-inp form-inp-textarea" placeholder="파일 또는 사진 업로드시 자동 작성 됩니다. 파일을 업로드하지 않을 경우 직접 입력해주세요."></textarea>
-                      </div>
+                  <div class="card printfile-card">
+                    <div class="left" style="display: none;">
+                      <ul class="choice-list-grp">
+                        <li class="list">
+                          <input type="radio" checked name="teacher" id="teacher01" class="gray-label-inp none">
+                          <label for="teacher01" class="txt-wrap">
+                            <span class="dark-txt dot-txt">1과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher02" class="gray-label-inp none">
+                          <label for="teacher02" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">2과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher03" class="gray-label-inp none">
+                          <label for="teacher03" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">3과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher04" class="gray-label-inp none">
+                          <label for="teacher04" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">4과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher05" class="gray-label-inp none">
+                          <label for="teacher05" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">5과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher06" class="gray-label-inp none">
+                          <label for="teacher06" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">6과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher07" class="gray-label-inp none">
+                          <label for="teacher07" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">7과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher08" class="gray-label-inp none">
+                          <label for="teacher08" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">8과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher09" class="gray-label-inp none">
+                          <label for="teacher09" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">9과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher10" class="gray-label-inp none">
+                          <label for="teacher10" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">10과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="special" class="gray-label-inp none">
+                          <label for="special" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">Special Lesson</span>
+                          </label>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="card-btn-wrap">
-                      <input type="file" id="file01" class="none">
-                      <label for="file01" class="btn-full ylw-solid-btn square-btn btn-md">
-                        <span class="txt">파일 선택 / 사진찍기</span>
-                      </label>
+                    <div class="right">
+                      <div class="checkbox-item">
+                        <input type="checkbox" name="range" id="range01" class="custom-checkbox-inp none">
+                        <label for="range01" class="custom-checkbox"></label>
+                        <label for="range01" class="dark-txt">전체선택</label>
+                      </div>
+                      <ul class="check-list-grp">
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01" class="custom-checkbox-inp none">
+                            <label for="range01" class="custom-checkbox"></label>
+                            <label for="range01" class="dark-txt">Day 1~40</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range02" class="custom-checkbox-inp none">
+                            <label for="range02" class="custom-checkbox"></label>
+                            <label for="range02" class="dark-txt">Day PLUS 1~40</label>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
 
@@ -927,34 +1009,32 @@
 
                   <!-- 제목 -->
                   <div class="card-set-ttl">
-                    <h3 class="ttl">폴더 선택</h3>
+                    <h3 class="ttl">출제범위</h3>
                   </div>
 
                   <!-- END 제목 -->
 
                   <!-- 카드 -->
-                  <div class="card flist-card">
+                  <div class="card range-card">
                     <div class="card-content">
-                      <ul class="flist-list-grp">
+                      <ul class="choice-list-grp">
                         <li class="list">
-                          <label class="flist-label">폴더 선택</label>
-                          <div class="flist-inp">
-                            <select class="form-inp form-inp-select inp-sm">
-                              <option value="">폴더 선택</option>
-                            </select>
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">워드마스터 고등 어원</span>
+                            <span class="dark-txt">/ Day 1~40</span>
                           </div>
                         </li>
                         <li class="list">
-                          <label class="flist-label">지문명 (제목)</label>
-                          <div class="flist-inp">
-                            <input type="text" class="form-inp inp-sm" placeholder="지문명 입력하세요">
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">워드마스터 고등 어원</span>
+                            <span class="dark-txt">/ Day PLUS 1~40</span>
                           </div>
                         </li>
                       </ul>
                     </div>
                     <div class="card-btn-wrap">
                       <button type="button" class="btn ylw-solid-btn square-btn btn-md">
-                        <span class="txt">완료</span>
+                        <span class="txt">선택완료</span>
                       </button>
                     </div>
                   </div>
@@ -969,8 +1049,37 @@
         </div>
 
         <!-- END 오른쪽 컨텐츠 -->
+
+        <!-- 팝업 -->
+
+        <!-- 팝업 2-2. 로딩 모달 (자료 생성 중) -->
+        <div id="loading-modal02" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('loading-modal02');"></div>
+          <div class="custom-modal loading-modal">
+            <div class="loading-modal-ttl">자료 생성 중</div>
+            <div class="loading-modal-content">
+              <div class="spinner-box">
+                <span class="dbl-spinner"></span>
+                <span class="dbl-spinner dbl-spinner01"></span>
+              </div>
+              <p class="dark-txt">로딩중 <span>5</span>%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 2-2. 로딩 모달 (자료 생성 중) -->
+
+        <!-- END 팝업 -->
       </div>
     </div>
     <script src="gpt-tutor/assets/js/ui.js"></script>
+    <script>
+      $('[data-tab]').on('click', function() {
+        $('[data-tab]').removeClass('active');
+        $(this).addClass('active');
+        $('.mini-flist-list-grp.type-first').removeClass('active');
+        $('#' + $(this).attr('data-tab')).addClass('active');
+      })
+    </script>
   </body>
 </html>
