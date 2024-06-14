@@ -25,6 +25,10 @@
   height: 20px;
 }
 
+.print-wrapper.type-print03 .checkbox-item {
+  top: 5px;
+}
+
 .print-wrapper:after {
   width: 100%;
   content: "";
@@ -262,6 +266,7 @@
   border-radius: 30px;
   padding: 25px;
   margin-top: 10px;
+  position: relative;
 }
 
 .print-wrapper.type-print01 .outline-box {
@@ -837,6 +842,16 @@
 .print-wrapper.type-print05 .prt-answer-list .answer-txt .txt {
   line-height: 1.4;
 }
+.print-wrapper.type-print05 .inner-ttl {
+  color: #ff7623;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+  position: relative;
+}
+.print-wrapper.type-print05 .inner-ttl .checkbox-item {
+  top: 0;
+}
 
 .print-wrapper.type-print02 .checkbox-item {
   top: 3px;
@@ -1339,6 +1354,10 @@
   font-size: 16px;
   font-weight: 600;
   margin-top: 15px;
+  position: relative;
+}
+.print-wrapper.type-print0302 .inner-ttl .checkbox-item {
+  top: 0;
 }
 .print-wrapper.type-print0302 .prt-answer-list-grp {
   padding: 15px 0;
@@ -1609,10 +1628,11 @@ body.print07-body {
   margin-bottom: 50px;
   page-break-after: always;
   page-break-inside: avoid;
+  position: relative;
 }
 .print07-qst .checkbox-item {
-  position: relative;
-  top: 0;
+  position: absolute;
+  top: 2px;
   left: 0;
   margin-bottom: -5px;
 }
@@ -1629,6 +1649,7 @@ body.print07-body {
   font-weight: 500;
   letter-spacing: -0.18px;
   line-height: 1.5;
+  padding-left: 27px;
 }
 .print07-qst .qst-txt {
   font-size: 14px;
@@ -1863,7 +1884,6 @@ body.print07-body {
 }
 .print07-answer .checkbox-item {
   position: relative;
-  top: 0;
   left: 0;
   margin-bottom: -5px;
 }
