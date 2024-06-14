@@ -26,7 +26,7 @@
             <div class="header-gnb-grp">
               <a href="tab01-textbook.html" class="gnb active">수업준비</a>
               <a href="page02-01.html" class="gnb ">수업</a>
-              <a href="page03-02.html" class="gnb ">관리</a>
+              <a href="page03-01.html" class="gnb ">관리</a>
             </div>
             <div class="header-right">
               <div class="alarm-btn-set">
@@ -164,8 +164,8 @@
           </div>
           <div class="header-gnb-to-snb type-03">
             <div class="header-snb-grp">
-              <a href="page03-02.html" class="snb ">학생관리</a>
-              <a href="page03-01.html" class="snb ">반 관리</a>
+              <a href="page03-01.html" class="snb ">학생관리</a>
+              <a href="page03-02.html" class="snb ">반 관리</a>
             </div>
           </div>
         </div>
@@ -668,15 +668,25 @@
                       </div>
 
                       <!-- TODO: 추가하기 버튼을 누를 시 생기는 블록입니다. -->
-                      <div class="sub-menu-btn-align type-add">
+                      <div class="sub-menu-btn-align type-add" style="display: none;">
                         <input type="text" class="form-inp">
                         <button type="button" class="btn ylw-solid-btn btn-xsm">추가</button>
                       </div>
 
                       <!-- TODO: 제일 아래에 있는 추가하기 버튼입니다. 누를 시 sub-menu-btn-alig.type-add 가 추가됩니다. -->
                       <div class="sub-menu-btn-align">
-                        <button type="button" class="btn gray-bd-btn btn-full btn-xsm file-edit-btn">추가하기</button>
+                        <button id="printFile-add-btn" type="button" class="btn gray-bd-btn btn-full btn-xsm file-edit-btn">추가하기</button>
                       </div>
+
+                      <!-- TODO: 추가하기 버튼 관련 임시 js 스크립트입니다. -->
+
+                      <!-- 어떤 느낌으로 구현되는지만 참고로 봐주시고, 실 기능에는 사용하지 말아주세요! -->
+                      <script>
+                        $('#printFile-add-btn').on('click', function() {
+                          $(this).parents('.sub-menu-btn-align').hide();
+                          $(this).parents('.sub-menu-btn-align').siblings('.sub-menu-btn-align.type-add').css('display', 'flex');
+                        })
+                      </script>
                     </div>
                   </div>
 
@@ -819,10 +829,22 @@
                     <div class="card-content">
                       <ul class="choice-list-grp">
                         <li class="list">
-                          <span class="dark-txt dot-txt">도안고1 프린트물 / 1과</span>
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">도안고1 프린트물 / 1과</span>
+                          </div>
+                          <button type="button" class="right-btn">
+                            <span class="txt-hidden">삭제하기</span>
+                            <i class="ico ico-x ico-red-x"></i>
+                          </button>
                         </li>
                         <li class="list">
-                          <span class="dark-txt dot-txt">도안고1 프린트물 / 2과</span>
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">도안고1 프린트물 / 2과</span>
+                          </div>
+                          <button type="button" class="right-btn">
+                            <span class="txt-hidden">삭제하기</span>
+                            <i class="ico ico-x ico-red-x"></i>
+                          </button>
                         </li>
                       </ul>
                     </div>
@@ -856,41 +878,53 @@
                       <ul class="download-list-grp">
                         <li class="list">
                           <input type="checkbox" name="download" id="download01" class="custom-checkbox-inp none">
-                          <label for="download01" class="custom-checkbox-btn">
-                            <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
+                          <div class="custom-checkbox-btn">
                             <span class="txt">판서용 지문</span>
+                          </div>
+                          <label for="download01" class="custom-checkbox type-02">
+                            <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
                           </label>
                           <button type="button" class="ylw-bd-btn square-btn btn-lg" onclick="openModal('preview-modal01');">미리보기</button>
                         </li>
                         <li class="list">
                           <input type="checkbox" name="download" id="download02" class="custom-checkbox-inp none">
-                          <label for="download02" class="custom-checkbox-btn">
-                            <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
+                          <div class="custom-checkbox-btn">
                             <span class="txt">단어</span>
+                          </div>
+                          <label for="download02" class="custom-checkbox type-02">
+                            <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
                           </label>
-                          <button type="button" class="ylw-bd-btn square-btn btn-lg">미리보기</button>
+                          <button type="button" onclick="openModal('preview-modal02');" class="ylw-bd-btn square-btn btn-lg">미리보기</button>
                         </li>
                         <li class="list">
                           <input type="checkbox" name="download" id="download03" class="custom-checkbox-inp none">
-                          <label for="download03" class="custom-checkbox-btn">
+                          <div class="custom-checkbox-btn">
+                            <span class="txt">강의자료</span>
+                          </div>
+                          <label for="download03" class="custom-checkbox type-02">
                             <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
-                            <span class="txt">지문분석</span>
                           </label>
-                          <button type="button" class="ylw-bd-btn square-btn btn-lg">미리보기</button>
+                          <button type="button" onclick="openModal('preview-modal03');" class="ylw-bd-btn square-btn btn-lg">미리보기</button>
                         </li>
                         <li class="list">
                           <input type="checkbox" name="download" id="download04" class="custom-checkbox-inp none">
-                          <label for="download04" class="custom-checkbox-btn">
-                            <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
+                          <div class="custom-checkbox-btn">
                             <span class="txt">워크북</span>
+                          </div>
+                          <label for="download04" class="custom-checkbox type-02">
+                            <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
                           </label>
-                          <button type="button" class="ylw-bd-btn square-btn btn-lg">미리보기</button>
+                          <button type="button" onclick="openModal('preview-modal04');" class="ylw-bd-btn square-btn btn-lg">미리보기</button>
                         </li>
                       </ul>
                     </div>
                     <div class="card-btn-wrap">
-                      <button type="button" class="btn ylw-solid-btn square-btn btn-md">
+                      <button type="button" class="btn ylw-bd-btn square-btn btn-md">
                         <span class="txt">다운로드</span>
+                      </button>
+                      <button type="button" class="btn ylw-solid-btn square-btn btn-md" onclick="openModal('kakao-modal01');">
+                        <i class="ico ico-kakao"></i>
+                        <span class="txt">카카오톡으로 발송</span>
                       </button>
                     </div>
                   </div>
@@ -908,7 +942,7 @@
 
         <!-- 팝업 -->
 
-        <!-- 팝업 1. 판서용 지문 미리보기 -->
+        <!-- 팝업 1-1. 판서용 지문 미리보기 -->
         <div id="preview-modal01" class="modal-wrapper">
           <div class="modal-overlay" onclick="closeModal('preview-modal01')"></div>
           <div class="custom-modal preview-modal">
@@ -926,25 +960,7 @@
 
                   <!-- TODO: 리스트 클릭시 active 효과 추가 -->
                   <li class="active">
-                    <span class="dark-txt">김은성</span>
-                    <span class="gray-txt sm-txt">개인지문 1</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">2과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">2과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">4과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">한성 (김현석)</span>
-                    <span class="gray-txt sm-txt">1과</span>
-                  </li>
+                    <span class="dark-txt">판서용 지문</span>
                   <li class="blank">
                   </li>
                 </ul>
@@ -973,7 +989,166 @@
           </div>
         </div>
 
-        <!-- END 팝업 1. 판서용 지문 미리보기 -->
+        <!-- END 팝업 1-1. 판서용 지문 미리보기 -->
+
+        <!-- 팝업 1-2. 단어 팝업 미리보기 -->
+        <div id="preview-modal02" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('preview-modal02')"></div>
+          <div class="custom-modal preview-modal">
+
+            <!-- <button class="preview-modal-close-btn" onclick="closeModal('preview-modal01')">
+            <img src="gpt-tutor/assets/images/icon-close.svg" alt="">
+          </button> -->
+            <div class="preview-modal-ttl">
+              <h4 class="ttl">단어 미리보기</h4>
+              <button type="button" class="ylw-bd-btn square-btn btn-md" onclick="closeModal('preview-modal02')">확인</button>
+            </div>
+            <div class="preview-modal-content">
+              <div class="modal-sidebar" data-iframe-id="preview-02-iframe">
+                <ul>
+
+                  <!-- TODO: 리스트 클릭시 active 효과 추가 -->
+                  <li class="active" data-iframe-src="print02-01.html">
+                    <span class="dark-txt">단어</span>
+                  </li>
+                  <li data-iframe-src="print05-02.html">
+                    <span class="dark-txt">단어-정답지</span>
+                  </li>
+                  <li class="blank">
+                  </li>
+                </ul>
+              </div>
+              <div class="preview-modal-container">
+                <div class="preview-iframe-wrap">
+                  <iframe id="preview-02-iframe" src="print02-01.html" frameborder="0"></iframe>
+                </div>
+                <div class="modal-right-sidebar">
+                  <div class="sidebar-ttl">
+                    <h6 class="ttl">재생성 문항</h6>
+                  </div>
+                  <ul>
+                    <li class="preview-choiced-list">
+                      <span class="txt">김은성/개인지문 1</span>
+                      <button type="button" class="ico-btn del-btn">
+                        <span class="txt-hidden">삭제하기</span>
+                        <i class="ico ico-x"></i>
+                      </button>
+                    </li>
+                  </ul>
+                  <button type="button" class="ylw-solid-btn btn-lg square-btn btn-full" onclick="openModal('regenerate-modal');">재생성</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 1-2. 단어 팝업 미리보기 -->
+
+        <!-- 팝업 1-3. 강의 노트 미리보기 -->
+        <div id="preview-modal03" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('preview-modal03')"></div>
+          <div class="custom-modal preview-modal">
+
+            <!-- <button class="preview-modal-close-btn" onclick="closeModal('preview-modal01')">
+            <img src="gpt-tutor/assets/images/icon-close.svg" alt="">
+          </button> -->
+            <div class="preview-modal-ttl">
+              <h4 class="ttl">강의자료 미리보기</h4>
+              <button type="button" class="ylw-bd-btn square-btn btn-md" onclick="closeModal('preview-modal03')">확인</button>
+            </div>
+            <div class="preview-modal-content">
+              <div class="modal-sidebar" data-iframe-id="preview-03-iframe">
+                <ul>
+
+                  <!-- TODO: 리스트 클릭시 active 효과 추가 -->
+                  <li class="active" data-iframe-src="print01-01.html">
+                    <span class="dark-txt">강의자료</span>
+                  </li>
+                  <li data-iframe-src="print01-02.html">
+                    <span class="dark-txt">강의자료-리뷰테스트</span>
+                  </li>
+                  <li class="blank">
+                  </li>
+                </ul>
+              </div>
+              <div class="preview-modal-container">
+                <div class="preview-iframe-wrap">
+                  <iframe id="preview-03-iframe" src="print01-01.html" frameborder="0"></iframe>
+                </div>
+                <div class="modal-right-sidebar">
+                  <div class="sidebar-ttl">
+                    <h6 class="ttl">재생성 문항</h6>
+                  </div>
+                  <ul>
+                    <li class="preview-choiced-list">
+                      <span class="txt">김은성/개인지문 1</span>
+                      <button type="button" class="ico-btn del-btn">
+                        <span class="txt-hidden">삭제하기</span>
+                        <i class="ico ico-x"></i>
+                      </button>
+                    </li>
+                  </ul>
+                  <button type="button" class="ylw-solid-btn btn-lg square-btn btn-full" onclick="openModal('regenerate-modal');">재생성</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 1-3. 강의 노트 미리보기 -->
+
+        <!-- 팝업 1-4. 워크북 미리보기 -->
+        <div id="preview-modal04" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('preview-modal04')"></div>
+          <div class="custom-modal preview-modal">
+
+            <!-- <button class="preview-modal-close-btn" onclick="closeModal('preview-modal01')">
+            <img src="gpt-tutor/assets/images/icon-close.svg" alt="">
+          </button> -->
+            <div class="preview-modal-ttl">
+              <h4 class="ttl">워크북 미리보기</h4>
+              <button type="button" class="ylw-bd-btn square-btn btn-md" onclick="closeModal('preview-modal04')">확인</button>
+            </div>
+            <div class="preview-modal-content">
+              <div class="modal-sidebar" data-iframe-id="preview-04-iframe">
+                <ul>
+
+                  <!-- TODO: 리스트 클릭시 active 효과 추가 -->
+                  <li class="active" data-iframe-src="print03-01.html">
+                    <span class="dark-txt">워크북</span>
+                  </li>
+                  <li data-iframe-src="print03-02.html">
+                    <span class="dark-txt">워크북 정답지</span>
+                  </li>
+                  <li class="blank">
+                  </li>
+                </ul>
+              </div>
+              <div class="preview-modal-container">
+                <div class="preview-iframe-wrap">
+                  <iframe id="preview-04-iframe" src="print03-01.html" frameborder="0"></iframe>
+                </div>
+                <div class="modal-right-sidebar">
+                  <div class="sidebar-ttl">
+                    <h6 class="ttl">재생성 문항</h6>
+                  </div>
+                  <ul>
+                    <li class="preview-choiced-list">
+                      <span class="txt">김은성/개인지문 1</span>
+                      <button type="button" class="ico-btn del-btn">
+                        <span class="txt-hidden">삭제하기</span>
+                        <i class="ico ico-x"></i>
+                      </button>
+                    </li>
+                  </ul>
+                  <button type="button" class="ylw-solid-btn btn-lg square-btn btn-full" onclick="openModal('regenerate-modal');">재생성</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 1-4. 워크북미리보기 -->
 
         <!-- 팝업 2-1. 로딩 모달 (미리보기) -->
         <div id="loading-modal01" class="modal-wrapper">

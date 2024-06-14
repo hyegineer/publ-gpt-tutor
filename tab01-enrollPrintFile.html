@@ -26,7 +26,7 @@
             <div class="header-gnb-grp">
               <a href="tab01-textbook.html" class="gnb active">수업준비</a>
               <a href="page02-01.html" class="gnb ">수업</a>
-              <a href="page03-02.html" class="gnb ">관리</a>
+              <a href="page03-01.html" class="gnb ">관리</a>
             </div>
             <div class="header-right">
               <div class="alarm-btn-set">
@@ -164,8 +164,8 @@
           </div>
           <div class="header-gnb-to-snb type-03">
             <div class="header-snb-grp">
-              <a href="page03-02.html" class="snb ">학생관리</a>
-              <a href="page03-01.html" class="snb ">반 관리</a>
+              <a href="page03-01.html" class="snb ">학생관리</a>
+              <a href="page03-02.html" class="snb ">반 관리</a>
             </div>
           </div>
         </div>
@@ -668,15 +668,25 @@
                       </div>
 
                       <!-- TODO: 추가하기 버튼을 누를 시 생기는 블록입니다. -->
-                      <div class="sub-menu-btn-align type-add">
+                      <div class="sub-menu-btn-align type-add" style="display: none;">
                         <input type="text" class="form-inp">
                         <button type="button" class="btn ylw-solid-btn btn-xsm">추가</button>
                       </div>
 
                       <!-- TODO: 제일 아래에 있는 추가하기 버튼입니다. 누를 시 sub-menu-btn-alig.type-add 가 추가됩니다. -->
                       <div class="sub-menu-btn-align">
-                        <button type="button" class="btn gray-bd-btn btn-full btn-xsm file-edit-btn">추가하기</button>
+                        <button id="printFile-add-btn" type="button" class="btn gray-bd-btn btn-full btn-xsm file-edit-btn">추가하기</button>
                       </div>
+
+                      <!-- TODO: 추가하기 버튼 관련 임시 js 스크립트입니다. -->
+
+                      <!-- 어떤 느낌으로 구현되는지만 참고로 봐주시고, 실 기능에는 사용하지 말아주세요! -->
+                      <script>
+                        $('#printFile-add-btn').on('click', function() {
+                          $(this).parents('.sub-menu-btn-align').hide();
+                          $(this).parents('.sub-menu-btn-align').siblings('.sub-menu-btn-align.type-add').css('display', 'flex');
+                        })
+                      </script>
                     </div>
                   </div>
 

@@ -26,7 +26,7 @@
             <div class="header-gnb-grp">
               <a href="tab01-textbook.html" class="gnb ">수업준비</a>
               <a href="page02-01.html" class="gnb active">수업</a>
-              <a href="page03-02.html" class="gnb ">관리</a>
+              <a href="page03-01.html" class="gnb ">관리</a>
             </div>
             <div class="header-right">
               <div class="alarm-btn-set">
@@ -164,8 +164,8 @@
           </div>
           <div class="header-gnb-to-snb type-03">
             <div class="header-snb-grp">
-              <a href="page03-02.html" class="snb ">학생관리</a>
-              <a href="page03-01.html" class="snb ">반 관리</a>
+              <a href="page03-01.html" class="snb ">학생관리</a>
+              <a href="page03-02.html" class="snb ">반 관리</a>
             </div>
           </div>
         </div>
@@ -374,144 +374,148 @@
 
             <!-- 테이블 -->
             <div class="default-tbl">
-              <div class="tbl-head">
-                <div class="tbl-cell"></div>
-                <div class="tbl-cell">응시일</div>
-                <div class="tbl-cell">시험지</div>
-                <div class="tbl-cell">출제범위</div>
-                <div class="tbl-cell">오답보기</div>
-                <div class="tbl-cell">합격여부 (정답률)</div>
-                <div class="tbl-cell">재시험 횟수</div>
-                <div class="tbl-cell">더보기</div>
-              </div>
-              <div class="tbl-body">
-                <div class="tbl-row">
-                  <div class="tbl-cell">
-                    <div class="checkbox-item">
-                      <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
-                      <label for="class01" class="custom-checkbox"></label>
-                    </div>
+              <div class="tbl-wrapper">
+                <div class="tbl type-02">
+                  <div class="tbl-head">
+                    <div class="tbl-cell"></div>
+                    <div class="tbl-cell">응시일</div>
+                    <div class="tbl-cell">시험지</div>
+                    <div class="tbl-cell">출제범위</div>
+                    <div class="tbl-cell">오답보기</div>
+                    <div class="tbl-cell">합격여부 (정답률)</div>
+                    <div class="tbl-cell">재시험 횟수</div>
+                    <div class="tbl-cell">더보기</div>
                   </div>
-                  <div class="tbl-cell">
-                    24.01.01
-                  </div>
-                  <div class="tbl-cell">
-                    <span class="pink-txt">[변형]</span>
-                    <span>도안고 1 중간고사</span>
-                  </div>
-                  <div class="tbl-cell">
-                    교과서 4, 5과
-                  </div>
-                  <div class="tbl-cell">
-                    <button type="button" class="ico-btn" onclick="openModal('incorrect-view-popup');">
-                      <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
-                    </button>
-                  </div>
-                  <div class="tbl-cell">
-                    합격 (90%)
-                  </div>
-                  <div class="tbl-cell">
-                    O
-                  </div>
-                  <div class="tbl-cell">
-                    <div class="hover-set">
-                      <button type="button" class="hover-set-btn">
-                        <i class="ico ico-verti-dots"></i>
-                        <span class="txt-hidden">더보기</span>
-                      </button>
-                      <div class="hover-set-lists-wrap">
-                        <div class="hover-set-lists">
-                          <button type="button" class="list-btn" onclick="openModal('incorrect-analyze-popup');">오답분석</button>
-                          <button type="button" class="list-btn">다운로드</button>
-                          <button type="button" class="list-btn" onclick="openModal('confirm-del-modal');">삭제</button>
+                  <div class="tbl-body">
+                    <div class="tbl-row">
+                      <div class="tbl-cell">
+                        <div class="checkbox-item">
+                          <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
+                          <label for="class01" class="custom-checkbox"></label>
+                        </div>
+                      </div>
+                      <div class="tbl-cell">
+                        24.01.01
+                      </div>
+                      <div class="tbl-cell">
+                        <span class="pink-txt">[변형]</span>
+                        <span>도안고 1 중간고사</span>
+                      </div>
+                      <div class="tbl-cell">
+                        교과서 4, 5과
+                      </div>
+                      <div class="tbl-cell">
+                        <button type="button" class="ico-btn" onclick="openModal('incorrect-view-popup');">
+                          <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
+                        </button>
+                      </div>
+                      <div class="tbl-cell">
+                        합격 (90%)
+                      </div>
+                      <div class="tbl-cell">
+                        O
+                      </div>
+                      <div class="tbl-cell">
+                        <div class="hover-set">
+                          <button type="button" class="hover-set-btn">
+                            <i class="ico ico-verti-dots"></i>
+                            <span class="txt-hidden">더보기</span>
+                          </button>
+                          <div class="hover-set-lists-wrap">
+                            <div class="hover-set-lists">
+                              <button type="button" class="list-btn" onclick="openModal('incorrect-analyze-popup');">오답분석</button>
+                              <button type="button" class="list-btn">다운로드</button>
+                              <button type="button" class="list-btn" onclick="openModal('confirm-del-modal');">삭제</button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="tbl-row">
-                  <div class="tbl-cell">
-                    <div class="checkbox-item">
-                      <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
-                      <label for="class01" class="custom-checkbox"></label>
-                    </div>
-                  </div>
-                  <div class="tbl-cell">
-                    24.01.01
-                  </div>
-                  <div class="tbl-cell">
-                    <span class="mint-txt">[단어]</span>
-                    <span>도안고 1 중간고사</span>
-                  </div>
-                  <div class="tbl-cell">
-                    교과서 4, 5과
-                  </div>
-                  <div class="tbl-cell">
-                    <button type="button" class="ico-btn" onclick="openModal('incorrect-view-popup');">
-                      <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
-                    </button>
-                  </div>
-                  <div class="tbl-cell">
-                    합격 (90%)
-                  </div>
-                  <div class="tbl-cell">
-                    O
-                  </div>
-                  <div class="tbl-cell">
-                    <div class="hover-set">
-                      <button type="button" class="hover-set-btn">
-                        <i class="ico ico-verti-dots"></i>
-                        <span class="txt-hidden">더보기</span>
-                      </button>
-                      <div class="hover-set-lists-wrap">
-                        <div class="hover-set-lists">
-                          <button type="button" class="list-btn" onclick="openModal('incorrect-analyze-popup');">오답분석</button>
-                          <button type="button" class="list-btn">다운로드</button>
-                          <button type="button" class="list-btn" onclick="openModal('confirm-del-modal');">삭제</button>
+                    <div class="tbl-row">
+                      <div class="tbl-cell">
+                        <div class="checkbox-item">
+                          <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
+                          <label for="class01" class="custom-checkbox"></label>
+                        </div>
+                      </div>
+                      <div class="tbl-cell">
+                        24.01.01
+                      </div>
+                      <div class="tbl-cell">
+                        <span class="mint-txt">[단어]</span>
+                        <span>도안고 1 중간고사</span>
+                      </div>
+                      <div class="tbl-cell">
+                        교과서 4, 5과
+                      </div>
+                      <div class="tbl-cell">
+                        <button type="button" class="ico-btn" onclick="openModal('incorrect-view-popup');">
+                          <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
+                        </button>
+                      </div>
+                      <div class="tbl-cell">
+                        합격 (90%)
+                      </div>
+                      <div class="tbl-cell">
+                        O
+                      </div>
+                      <div class="tbl-cell">
+                        <div class="hover-set">
+                          <button type="button" class="hover-set-btn">
+                            <i class="ico ico-verti-dots"></i>
+                            <span class="txt-hidden">더보기</span>
+                          </button>
+                          <div class="hover-set-lists-wrap">
+                            <div class="hover-set-lists">
+                              <button type="button" class="list-btn" onclick="openModal('incorrect-analyze-popup');">오답분석</button>
+                              <button type="button" class="list-btn">다운로드</button>
+                              <button type="button" class="list-btn" onclick="openModal('confirm-del-modal');">삭제</button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="tbl-row">
-                  <div class="tbl-cell">
-                    <div class="checkbox-item">
-                      <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
-                      <label for="class01" class="custom-checkbox"></label>
-                    </div>
-                  </div>
-                  <div class="tbl-cell">
-                    24.01.01
-                  </div>
-                  <div class="tbl-cell">
-                    <span class="blue-txt">[외부]</span>
-                    <span>도안고 1 중간고사</span>
-                  </div>
-                  <div class="tbl-cell">
-                    교과서 4, 5과
-                  </div>
-                  <div class="tbl-cell">
-                    <button type="button" class="ico-btn" onclick="openModal('incorrect-view-popup');">
-                      <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
-                    </button>
-                  </div>
-                  <div class="tbl-cell">
-                    합격 (90%)
-                  </div>
-                  <div class="tbl-cell">
-                    O
-                  </div>
-                  <div class="tbl-cell">
-                    <div class="hover-set">
-                      <button type="button" class="hover-set-btn">
-                        <i class="ico ico-verti-dots"></i>
-                        <span class="txt-hidden">더보기</span>
-                      </button>
-                      <div class="hover-set-lists-wrap">
-                        <div class="hover-set-lists">
-                          <button type="button" class="list-btn" onclick="openModal('incorrect-analyze-popup');">오답분석</button>
-                          <button type="button" class="list-btn">다운로드</button>
-                          <button type="button" class="list-btn" onclick="openModal('confirm-del-modal');">삭제</button>
+                    <div class="tbl-row">
+                      <div class="tbl-cell">
+                        <div class="checkbox-item">
+                          <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
+                          <label for="class01" class="custom-checkbox"></label>
+                        </div>
+                      </div>
+                      <div class="tbl-cell">
+                        24.01.01
+                      </div>
+                      <div class="tbl-cell">
+                        <span class="blue-txt">[외부]</span>
+                        <span>도안고 1 중간고사</span>
+                      </div>
+                      <div class="tbl-cell">
+                        교과서 4, 5과
+                      </div>
+                      <div class="tbl-cell">
+                        <button type="button" class="ico-btn" onclick="openModal('incorrect-view-popup');">
+                          <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
+                        </button>
+                      </div>
+                      <div class="tbl-cell">
+                        합격 (90%)
+                      </div>
+                      <div class="tbl-cell">
+                        O
+                      </div>
+                      <div class="tbl-cell">
+                        <div class="hover-set">
+                          <button type="button" class="hover-set-btn">
+                            <i class="ico ico-verti-dots"></i>
+                            <span class="txt-hidden">더보기</span>
+                          </button>
+                          <div class="hover-set-lists-wrap">
+                            <div class="hover-set-lists">
+                              <button type="button" class="list-btn" onclick="openModal('incorrect-analyze-popup');">오답분석</button>
+                              <button type="button" class="list-btn">다운로드</button>
+                              <button type="button" class="list-btn" onclick="openModal('confirm-del-modal');">삭제</button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -26,7 +26,7 @@
             <div class="header-gnb-grp">
               <a href="tab01-textbook.html" class="gnb active">수업준비</a>
               <a href="page02-01.html" class="gnb ">수업</a>
-              <a href="page03-02.html" class="gnb ">관리</a>
+              <a href="page03-01.html" class="gnb ">관리</a>
             </div>
             <div class="header-right">
               <div class="alarm-btn-set">
@@ -164,8 +164,8 @@
           </div>
           <div class="header-gnb-to-snb type-03">
             <div class="header-snb-grp">
-              <a href="page03-02.html" class="snb ">학생관리</a>
-              <a href="page03-01.html" class="snb ">반 관리</a>
+              <a href="page03-01.html" class="snb ">학생관리</a>
+              <a href="page03-02.html" class="snb ">반 관리</a>
             </div>
           </div>
         </div>
@@ -222,7 +222,7 @@
 
                 <!-- 사이드바 메뉴 1. 교과서 -->
                 <li class="major-sidebar-menu-list ">
-                  <a href="tab01-textbook.html" class="menu">
+                  <a href="tab02-textbook.html" class="menu">
                     <i class="ico">
                       <img src="gpt-tutor/assets/images/ico-menu01-color.svg" alt="" class="ico-color">
                       <img src="gpt-tutor/assets/images/ico-menu01-gray.svg" alt="" class="ico-gray">
@@ -974,7 +974,7 @@
 
                     <!-- 미리보기 -->
                     <div class="cell">
-                      <button type="button" class="ico-btn" onclick="openModal('preview-modal02');">
+                      <button type="button" class="ico-btn" onclick="openModal('preview-class-note');">
                         <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
                       </button>
                     </div>
@@ -1042,7 +1042,7 @@
 
                     <!-- 미리보기 -->
                     <div class="cell">
-                      <button type="button" class="ico-btn">
+                      <button type="button" class="ico-btn" onclick="openModal('preview-class-note');">
                         <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
                       </button>
                     </div>
@@ -1078,72 +1078,56 @@
 
         <!-- 팝업 -->
 
-        <!-- 팝업 1. 문제 미리보기 -->
-        <div id="preview-modal02" class="modal-wrapper">
-          <div class="modal-overlay" onclick="closeModal('preview-modal02')"></div>
+        <!-- 팝업 1. 미리보기 -->
+        <div id="preview-class-note" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('preview-class-note')"></div>
           <div class="custom-modal preview-modal">
-
-            <!-- <button class="preview-modal-close-btn" onclick="closeModal('preview-modal01')">
-            <img src="gpt-tutor/assets/images/icon-close.svg" alt="">
-          </button> -->
             <div class="preview-modal-ttl">
-              <h4 class="ttl">단어 미리보기</h4>
-              <button type="button" class="ylw-bd-btn square-btn btn-md" onclick="closeModal('preview-modal02')">확인</button>
+              <h4 class="ttl">도안고1 프린트물 - 1과 미리보기</h4>
+              <button type="button" class="ylw-solid-btn square-btn btn-md" onclick="closeModal('preview-class-note')">확인</button>
             </div>
             <div class="preview-modal-content">
-              <div class="modal-sidebar">
-                <ul>
-
-                  <!-- TODO: 리스트 클릭시 active 효과 추가 -->
-                  <li class="active">
-                    <span class="dark-txt">김은성</span>
-                    <span class="gray-txt sm-txt">개인지문 1</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">2과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">2과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">4과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">한성 (김현석)</span>
-                    <span class="gray-txt sm-txt">1과</span>
-                  </li>
-                  <li class="blank">
-                  </li>
-                </ul>
-              </div>
-              <div class="preview-modal-container">
-                <div class="preview-iframe-wrap">
-                  <iframe src="print02-01.html" frameborder="0"></iframe>
-                </div>
-                <div class="modal-right-sidebar">
-                  <div class="sidebar-ttl">
-                    <h6 class="ttl">재생성 문항</h6>
+              <div class="modal-sidebar-wrapper">
+                <div class="modal-sidebar-container">
+                  <div class="mdsidebar-ttl-wrap">
+                    <h5 class="ttl">2022학년도 고2 원서읽기</h5>
+                    <b class="bold-ttl">The Giver written by Lois Lowry</b>
+                    <p class="txt">Chapter 3</p>
                   </div>
-                  <ul>
-                    <li class="preview-choiced-list">
-                      <span class="txt">김은성/개인지문 1</span>
-                      <button type="button" class="ico-btn del-btn">
-                        <span class="txt-hidden">삭제하기</span>
-                        <i class="ico ico-x"></i>
-                      </button>
-                    </li>
-                  </ul>
-                  <button type="button" class="ylw-solid-btn btn-lg square-btn btn-full" onclick="openModal('regenerate-modal');">재생성</button>
+                  <div class="description-content">
+                    <p class="txt">“Oh, look!” Lily squealed in delight. “Isn’t he cute? Look, how tiny he is! And he has funny
+                      eyes like yours, Jonas! Maybe he had the same Birthmother as you.” Jonas glared at her. He didn’t like it
+                      that she had mentioned his eyes. Almost every citizen in the community had dark eyes. His parents did, and
+                      Lily did, and so did all of his group members and friends. But there were a few exceptions: Jonas himself,
+                      and female Five who he had noticed had the different, lighter eyes. No one mentioned such things; it was
+                      not a rule, but was considered rude to call attention to things that were unsettling or different about
+                      individuals. Lily, he decided, would have to learn that soon, or she would be called in for chastisement
+                      because of her insensitive chatter. “I think newchildren are so cute,” Lily sighed, “I hope I get assigned
+                      to be a Birthmother.” “Lily!” Mother spoke very sharper. “Don’t say that. There’s very little honor in
+                      that Assignment.”
+                    </p>
+                    <p class="txt">“But I heard the Birthmothers get wonderful food, and they have very gentle exercise periods,
+                      and most of the time they just play games and amuse themselves while they’re waiting. I think I’d like
+                      that,” Lily said. “Three years, three births and that’s all. And the birth mothers never even get to see
+                      newchildren. After that, they are Laborers for the rest of their adult lives, until the day that they
+                      enter the House of the Old. Is that what you want, Lily? Three lazy years, and then hard physical labor
+                      until you are old? ”Well, no, I guess not,“ Lily acknowledged reluctantly.
+                      Jonas thought about an incident that had happened during the recreation period, when he had been playing
+                      with Asher. Jonas had casually picked up an apple from the basket where the snacks were kept, and had
+                      thrown it to his friend. Asher had thrown it back, and they had begun a simple game of catch. There had
+                      been nothing special about it.l But suddenly Jonas had noticed, following the path of the apple through
+                      the air with his eyes, that the piece of fruit had – well, this was the part that he couldn’t adequately
+                      understand –the apple had changed. Just for an instant. It had changed in mid-air, he remembered. It had
+                      happened four times.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- END 팝업 1. 문제 미리보기 -->
+        <!-- END 팝업 1. 미리보기 -->
 
         <!-- 팝업 2-1. 로딩 모달 (미리보기) -->
         <div id="loading-modal01" class="modal-wrapper">

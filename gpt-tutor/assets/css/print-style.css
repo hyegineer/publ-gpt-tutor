@@ -5,6 +5,11 @@
   font-weight: normal;
   font-style: normal;
 }
+.print-body {
+  width: 900px;
+  margin: 0 auto;
+}
+
 .print-wrapper {
   width: 900px;
   min-height: 297mm;

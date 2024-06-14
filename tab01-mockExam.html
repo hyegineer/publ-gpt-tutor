@@ -26,7 +26,7 @@
             <div class="header-gnb-grp">
               <a href="tab01-textbook.html" class="gnb active">수업준비</a>
               <a href="page02-01.html" class="gnb ">수업</a>
-              <a href="page03-02.html" class="gnb ">관리</a>
+              <a href="page03-01.html" class="gnb ">관리</a>
             </div>
             <div class="header-right">
               <div class="alarm-btn-set">
@@ -164,8 +164,8 @@
           </div>
           <div class="header-gnb-to-snb type-03">
             <div class="header-snb-grp">
-              <a href="page03-02.html" class="snb ">학생관리</a>
-              <a href="page03-01.html" class="snb ">반 관리</a>
+              <a href="page03-01.html" class="snb ">학생관리</a>
+              <a href="page03-02.html" class="snb ">반 관리</a>
             </div>
           </div>
         </div>
@@ -668,15 +668,25 @@
                       </div>
 
                       <!-- TODO: 추가하기 버튼을 누를 시 생기는 블록입니다. -->
-                      <div class="sub-menu-btn-align type-add">
+                      <div class="sub-menu-btn-align type-add" style="display: none;">
                         <input type="text" class="form-inp">
                         <button type="button" class="btn ylw-solid-btn btn-xsm">추가</button>
                       </div>
 
                       <!-- TODO: 제일 아래에 있는 추가하기 버튼입니다. 누를 시 sub-menu-btn-alig.type-add 가 추가됩니다. -->
                       <div class="sub-menu-btn-align">
-                        <button type="button" class="btn gray-bd-btn btn-full btn-xsm file-edit-btn">추가하기</button>
+                        <button id="printFile-add-btn" type="button" class="btn gray-bd-btn btn-full btn-xsm file-edit-btn">추가하기</button>
                       </div>
+
+                      <!-- TODO: 추가하기 버튼 관련 임시 js 스크립트입니다. -->
+
+                      <!-- 어떤 느낌으로 구현되는지만 참고로 봐주시고, 실 기능에는 사용하지 말아주세요! -->
+                      <script>
+                        $('#printFile-add-btn').on('click', function() {
+                          $(this).parents('.sub-menu-btn-align').hide();
+                          $(this).parents('.sub-menu-btn-align').siblings('.sub-menu-btn-align.type-add').css('display', 'flex');
+                        })
+                      </script>
                     </div>
                   </div>
 
@@ -822,7 +832,49 @@
                           <div class="checkbox-item">
                             <input type="checkbox" name="range" id="range01" class="custom-checkbox-inp none">
                             <label for="range01" class="custom-checkbox"></label>
-                            <label for="range01" class="dark-txt">18~24</label>
+                            <label for="range01" class="dark-txt">18</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01-02" class="custom-checkbox-inp none">
+                            <label for="range01-02" class="custom-checkbox"></label>
+                            <label for="range01-02" class="dark-txt">19</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01-03" class="custom-checkbox-inp none">
+                            <label for="range01-03" class="custom-checkbox"></label>
+                            <label for="range01-03" class="dark-txt">20</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01-04" class="custom-checkbox-inp none">
+                            <label for="range01-04" class="custom-checkbox"></label>
+                            <label for="range01-04" class="dark-txt">21</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01-05" class="custom-checkbox-inp none">
+                            <label for="range01-05" class="custom-checkbox"></label>
+                            <label for="range01-05" class="dark-txt">22</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01-06" class="custom-checkbox-inp none">
+                            <label for="range01-06" class="custom-checkbox"></label>
+                            <label for="range01-06" class="dark-txt">23</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01-07" class="custom-checkbox-inp none">
+                            <label for="range01-07" class="custom-checkbox"></label>
+                            <label for="range01-07" class="dark-txt">25</label>
                           </div>
                         </li>
                         <li class="list">
@@ -836,7 +888,84 @@
                           <div class="checkbox-item">
                             <input type="checkbox" name="range" id="range03" class="custom-checkbox-inp none">
                             <label for="range03" class="custom-checkbox"></label>
-                            <label for="range03" class="dark-txt">29~40</label>
+                            <label for="range03" class="dark-txt">29</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-02" class="custom-checkbox-inp none">
+                            <label for="range03-02" class="custom-checkbox"></label>
+                            <label for="range03-02" class="dark-txt">30</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-03" class="custom-checkbox-inp none">
+                            <label for="range03-03" class="custom-checkbox"></label>
+                            <label for="range03-03" class="dark-txt">31</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-04" class="custom-checkbox-inp none">
+                            <label for="range03-04" class="custom-checkbox"></label>
+                            <label for="range03-04" class="dark-txt">32</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-05" class="custom-checkbox-inp none">
+                            <label for="range03-05" class="custom-checkbox"></label>
+                            <label for="range03-05" class="dark-txt">33</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-06" class="custom-checkbox-inp none">
+                            <label for="range03-06" class="custom-checkbox"></label>
+                            <label for="range03-06" class="dark-txt">34</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-07" class="custom-checkbox-inp none">
+                            <label for="range03-07" class="custom-checkbox"></label>
+                            <label for="range03-07" class="dark-txt">35</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-08" class="custom-checkbox-inp none">
+                            <label for="range03-08" class="custom-checkbox"></label>
+                            <label for="range03-08" class="dark-txt">36</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-09" class="custom-checkbox-inp none">
+                            <label for="range03-09" class="custom-checkbox"></label>
+                            <label for="range03-09" class="dark-txt">37</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-10" class="custom-checkbox-inp none">
+                            <label for="range03-10" class="custom-checkbox"></label>
+                            <label for="range03-10" class="dark-txt">38</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-11" class="custom-checkbox-inp none">
+                            <label for="range03-11" class="custom-checkbox"></label>
+                            <label for="range03-11" class="dark-txt">39</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-12" class="custom-checkbox-inp none">
+                            <label for="range03-12" class="custom-checkbox"></label>
+                            <label for="range03-12" class="dark-txt">40</label>
                           </div>
                         </li>
                         <li class="list">
@@ -886,7 +1015,7 @@
                           </div>
                           <button type="button" class="right-btn">
                             <span class="txt-hidden">삭제하기</span>
-                            <i class="ico ico-x"></i>
+                            <i class="ico ico-x ico-red-x"></i>
                           </button>
                         </li>
                         <li class="list">
@@ -897,7 +1026,7 @@
                           </div>
                           <button type="button" class="right-btn">
                             <span class="txt-hidden">삭제하기</span>
-                            <i class="ico ico-x"></i>
+                            <i class="ico ico-x ico-red-x"></i>
                           </button>
                         </li>
                         <li class="list">
@@ -908,7 +1037,7 @@
                           </div>
                           <button type="button" class="right-btn">
                             <span class="txt-hidden">삭제하기</span>
-                            <i class="ico ico-x"></i>
+                            <i class="ico ico-x ico-red-x"></i>
                           </button>
                         </li>
                       </ul>
@@ -1025,25 +1154,7 @@
 
                   <!-- TODO: 리스트 클릭시 active 효과 추가 -->
                   <li class="active">
-                    <span class="dark-txt">김은성</span>
-                    <span class="gray-txt sm-txt">개인지문 1</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">2과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">2과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">4과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">한성 (김현석)</span>
-                    <span class="gray-txt sm-txt">1과</span>
-                  </li>
+                    <span class="dark-txt">판서용 지문</span>
                   <li class="blank">
                   </li>
                 </ul>
@@ -1087,29 +1198,15 @@
               <button type="button" class="ylw-bd-btn square-btn btn-md" onclick="closeModal('preview-modal02')">확인</button>
             </div>
             <div class="preview-modal-content">
-              <div class="modal-sidebar">
+              <div class="modal-sidebar" data-iframe-id="preview-02-iframe">
                 <ul>
 
                   <!-- TODO: 리스트 클릭시 active 효과 추가 -->
-                  <li class="active">
-                    <span class="dark-txt">김은성</span>
-                    <span class="gray-txt sm-txt">개인지문 1</span>
+                  <li class="active" data-iframe-src="print02-01.html">
+                    <span class="dark-txt">단어</span>
                   </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">2과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">2과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">4과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">한성 (김현석)</span>
-                    <span class="gray-txt sm-txt">1과</span>
+                  <li data-iframe-src="print05-02.html">
+                    <span class="dark-txt">단어-정답지</span>
                   </li>
                   <li class="blank">
                   </li>
@@ -1117,7 +1214,7 @@
               </div>
               <div class="preview-modal-container">
                 <div class="preview-iframe-wrap">
-                  <iframe src="print02-01.html" frameborder="0"></iframe>
+                  <iframe id="preview-02-iframe" src="print02-01.html" frameborder="0"></iframe>
                 </div>
                 <div class="modal-right-sidebar">
                   <div class="sidebar-ttl">
@@ -1154,29 +1251,15 @@
               <button type="button" class="ylw-bd-btn square-btn btn-md" onclick="closeModal('preview-modal03')">확인</button>
             </div>
             <div class="preview-modal-content">
-              <div class="modal-sidebar">
+              <div class="modal-sidebar" data-iframe-id="preview-03-iframe">
                 <ul>
 
                   <!-- TODO: 리스트 클릭시 active 효과 추가 -->
-                  <li class="active">
-                    <span class="dark-txt">김은성</span>
-                    <span class="gray-txt sm-txt">개인지문 1</span>
+                  <li class="active" data-iframe-src="print01-01.html">
+                    <span class="dark-txt">강의자료</span>
                   </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">2과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">2과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">4과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">한성 (김현석)</span>
-                    <span class="gray-txt sm-txt">1과</span>
+                  <li data-iframe-src="print01-02.html">
+                    <span class="dark-txt">강의자료-리뷰테스트</span>
                   </li>
                   <li class="blank">
                   </li>
@@ -1184,7 +1267,7 @@
               </div>
               <div class="preview-modal-container">
                 <div class="preview-iframe-wrap">
-                  <iframe src="print01-01.html" frameborder="0"></iframe>
+                  <iframe id="preview-03-iframe" src="print01-01.html" frameborder="0"></iframe>
                 </div>
                 <div class="modal-right-sidebar">
                   <div class="sidebar-ttl">
@@ -1221,29 +1304,15 @@
               <button type="button" class="ylw-bd-btn square-btn btn-md" onclick="closeModal('preview-modal04')">확인</button>
             </div>
             <div class="preview-modal-content">
-              <div class="modal-sidebar">
+              <div class="modal-sidebar" data-iframe-id="preview-04-iframe">
                 <ul>
 
                   <!-- TODO: 리스트 클릭시 active 효과 추가 -->
-                  <li class="active">
-                    <span class="dark-txt">김은성</span>
-                    <span class="gray-txt sm-txt">개인지문 1</span>
+                  <li class="active" data-iframe-src="print03-01.html">
+                    <span class="dark-txt">워크북</span>
                   </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">2과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">2과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">금성 (최인철)</span>
-                    <span class="gray-txt sm-txt">4과</span>
-                  </li>
-                  <li>
-                    <span class="dark-txt">한성 (김현석)</span>
-                    <span class="gray-txt sm-txt">1과</span>
+                  <li data-iframe-src="print03-02.html">
+                    <span class="dark-txt">워크북 정답지</span>
                   </li>
                   <li class="blank">
                   </li>
@@ -1251,7 +1320,7 @@
               </div>
               <div class="preview-modal-container">
                 <div class="preview-iframe-wrap">
-                  <iframe src="print03-01.html" frameborder="0"></iframe>
+                  <iframe id="preview-04-iframe" src="print03-01.html" frameborder="0"></iframe>
                 </div>
                 <div class="modal-right-sidebar">
                   <div class="sidebar-ttl">
